@@ -232,21 +232,22 @@ export const experiences = [
     },
 ];
 
+// {
+//     name: 'Contact',
+//     iconUrl: contact,
+//     link: '/contact',
+// },
+
 export const socialLinks = [
-    {
-        name: 'Contact',
-        iconUrl: contact,
-        link: '/contact',
-    },
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/ConquerorFY',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/ryan-lim-207412207/',
     }
 ];
 
@@ -254,43 +255,43 @@ export const projects = [
     {
         iconUrl: pricewise,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        name: 'eTaman Application',
+        description: 'A community-based social media application that is built using Flutter and Python Django frameworks.',
+        link: 'https://github.com/ConquerorFY/APU-Final-Year-Project',
     },
     {
         iconUrl: threads,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'Secret Santa Christmas Game',
+        description: 'A simple web browser game that is developed in HTML, CSS and React.js framework.',
+        link: 'https://github.com/ConquerorFY/Secret-Santa-Christmas-Game',
     },
     {
         iconUrl: car,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'ClassInsight Pro',
+        description: "A browser extension that utilizes Azure's OpenAI API to provide real-time summary and notes regarding lecture videos on Microsoft Stream.",
+        link: 'https://github.com/Diskordlit/ClassInsight',
     },
     {
         iconUrl: snapgram,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        name: 'AHHASC Hostel Management System',
+        description: 'A hostel management system that is built using Java NetBeans.',
+        link: 'https://github.com/ConquerorFY/AHHASC',
     },
     {
         iconUrl: estate,
         theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        name: 'HereForYou-Consultation',
+        description: 'A full-stack university consultation web system that is buit using HTML, CSS, JavaScript and PHP',
+        link: 'https://github.com/ConquerorFY/HereForYou-Consultation',
     },
     {
         iconUrl: summiz,
         theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        name: 'Lab Management System',
+        description: 'A lab management system that is built in Bash Shell Scripting language.',
+        link: 'https://github.com/ConquerorFY/Lab-Management-System',
     }
 ];

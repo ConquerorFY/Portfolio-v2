@@ -1,5 +1,5 @@
 import React from "react";
-import { projects } from "../constants";
+import { projects, socialLinks } from "../constants";
 import { Link } from "react-router-dom";
 import { arrow } from "../assets/icons";
 import CTA from "../components/CTA";
@@ -11,13 +11,10 @@ const Projects = () => {
                 My <span className="blue-gradient_text font-semibold drop-shadow">Projects</span>
             </h1>
 
-            <div className="mt-5 flex felx-col gap-3 text-slate-500">
+            <div className="mt-5 flex flex-col gap-3 text-slate-500">
                 <p>
-                    I've embarked on numerous projects throughout the years, but these are
-                    the ones I hold closest to my heart. Many of them are open-source, so if
-                    you come across something that piques your interest, feel free to
-                    explore the codebase and contribute your ideas for further enhancements.
-                    Your collaboration is highly valued!
+                    I have undertaken various projects throughout the years of studying and working as a software engineer.
+                    Most of them are open-source and available at my GitHub repository. Here are some of my projects:
                 </p>
             </div>
 
@@ -47,6 +44,29 @@ const Projects = () => {
                         </div>
                     </div>
                 ))}
+            </div>
+
+            <div className="mb-20 flex flex-col gap-3 text-slate-500 sm:w-max">
+                <p>
+                    ... and many more!
+                </p>
+                <p>
+                    Follow my Github repository for more!
+                </p>
+                <div className="flex flex-row justify-evenly mt-3">
+                    {
+                        socialLinks.map((link, index) => (
+                            <Link to={link.link} key={index} target="_blank" rel="noopener noreferrer">
+                                <div className="block-container w-14 h-14">
+                                    <div className="btn-back rounded-xl" />
+                                    <div className="btn-front rounded-xl flex justify-center items-center">
+                                        <img src={link.iconUrl} alt={link.name} className="w-1/2 h-1/2 object-contain" />
+                                    </div>
+                                </div>
+                            </Link>
+                        ))
+                    }
+                </div>
             </div>
 
             <hr className="border-slate-200" />
