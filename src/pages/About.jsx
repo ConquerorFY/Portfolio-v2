@@ -8,6 +8,13 @@ import { skills, experiences } from "../constants";
 import { Carousel } from 'flowbite-react';
 import CTA from "../components/CTA";
 
+const customControlTheme = {
+    "control": {
+        "base": "inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-300/30 group-hover:bg-slate-300/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-slate-100 dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 sm:h-10 sm:w-10",
+        "icon": "h-5 w-5 text-black dark:text-gray-800 sm:h-6 sm:w-6"
+    }
+}
+
 const About = () => {
     const [showcaseSkills, setShowcaseSkills] = useState({});
 
@@ -53,7 +60,7 @@ const About = () => {
                     <h3 className="subhead-text">My Skills</h3>
 
                     <div className="h-[300px] mt-16">
-                        <Carousel slideInterval={5000} className="color-black" indicators={false}>
+                        <Carousel theme={customControlTheme} slide={false} className="color-black" indicators={false}>
                             <div className="flex flex-col h-full items-start justify-start px-5">
                                 <h3 className="sub-subhead-text">Frontend</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
@@ -159,7 +166,7 @@ const About = () => {
                     <h3 className="subhead-text">Work Experience</h3>
                     <div className="mt-5 flex felx-col gap-3 text-slate-500">
                         <p>
-                            I've worked with all sorts of companies, leveling up my skills and teaming up with smart people.
+                            I've worked with different individuals and companies these past few years.
                             Here's the rundown:
                         </p>
                     </div>

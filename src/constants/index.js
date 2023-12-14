@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { blue, freelance, hilti, magik, sunway } from "../assets/images";
 import {
     car,
     contact,
@@ -16,7 +16,6 @@ import {
     nodejs,
     pricewise,
     react,
-    redux,
     snapgram,
     summiz,
     tailwindcss,
@@ -166,55 +165,69 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
+        title: "Lab Assistant",
+        company_name: "Sunway iLab",
+        icon: sunway,
         iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        date: "March 2019 - April 2019",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Help out students in their lab projects",
+            "Assist students in using the different lab equipments",
+            "Clean up and arrange the lab environment"
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "Software Engineer Intern",
+        company_name: "Blue Ocean IT Sdn Bhd",
+        icon: blue,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "May 2021 - Jul 2021",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Fix UI issues on websites using Angular JS",
+            "Implement new frontend features and functions based on different user requirements",
+            "Create APIs for data communication between frontend and backend",
+            "Modify backend server processing logic using Python Django framework",
+            "Manage website database using SQL Server"
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        title: "Software Developer",
+        company_name: "Magik Tech Sdn Bhd",
+        icon: magik,
+        iconBg: "#ffffff",
+        date: "Jul 2021 - Dec 2021",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Create web pages for systems using Vue.js",
+            "Fix responsive issues on websites for mobile devices and tablets",
+            "Create API for data communication between frontend and backend",
+            "Modify backend server processing logic using PHP",
+            "Deploy web systems to production"
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
+        title: "IT Intern",
+        company_name: "HILTI Asia IT Services Sdn Bhd",
+        icon: hilti,
         iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        date: "Oct 2022 - Jan 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Perform different test operations on APIs developed by other team members",
+            "Create an automated test suite for the development team using Java Spring Boot and Cucumber Framework",
+            "Manage CI/CD operations on GitLab for the automated test suite"
+        ],
+    },
+    {
+        title: "Freelance Programmer / Software Developer",
+        company_name: "Remote",
+        icon: freelance,
+        iconBg: "#b123af",
+        date: "Mar 2022 - Now",
+        points: [
+            "Worked on creating web pages in React Next.js framework based on different wireframe designs",
+            "Worked on creating full stack web applications using Angular.js, Expree.js and MongoDB",
+            "Worked on creating desktop applications using Java NetBeans",
+            "Worked on creating systems using Bash",
+            "Worked on creating Android applications using Android Studio and Flutter"
         ],
     },
 ];
