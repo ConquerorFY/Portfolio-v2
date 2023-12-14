@@ -7,8 +7,17 @@ import React, { useEffect, useState } from "react";
 import { skills, experiences } from "../constants";
 import { Carousel } from 'flowbite-react';
 import CTA from "../components/CTA";
+import { Tooltip } from "flowbite-react";
 
 const customControlTheme = {
+    "indicators": {
+        "active": {
+            "off": "bg-slate-400/50 hover:bg-slate-600 dark:bg-gray-800/50 dark:hover:bg-gray-800",
+            "on": "bg-slate-800 dark:bg-gray-800"
+        },
+        "base": "h-3 w-3 rounded-full",
+        "wrapper": "absolute bottom-5 left-1/2 flex -translate-x-1/2 space-x-3"
+    },
     "control": {
         "base": "inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-300/30 group-hover:bg-slate-300/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-slate-100 dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 sm:h-10 sm:w-10",
         "icon": "h-5 w-5 text-black dark:text-gray-800 sm:h-6 sm:w-6"
@@ -52,7 +61,7 @@ const About = () => {
 
                 <div className="mt-5 flex felx-col gap-3 text-slate-500">
                     <p>
-                        Software Engineer based in Malaysia with great passionate for coding, problem-solving and eager to learn new technologies.
+                        A software engineer based in Malaysia with great passionate for coding, problem-solving and eager to learn new technologies.
                     </p>
                 </div>
 
@@ -60,17 +69,19 @@ const About = () => {
                     <h3 className="subhead-text">My Skills</h3>
 
                     <div className="h-[300px] mt-16">
-                        <Carousel theme={customControlTheme} slide={false} className="color-black" indicators={false}>
+                        <Carousel theme={customControlTheme} slideInterval={5000}>
                             <div className="flex flex-col h-full items-start justify-start px-5">
                                 <h3 className="sub-subhead-text">Frontend</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
                                     {showcaseSkills.Frontend.map((skill, index) => (
-                                        <div className="block-container w-20 h-20" key={index}>
-                                            <div className="btn-back rounded-xl" />
-                                            <div className="btn-front rounded-xl flex justify-center items-center">
-                                                <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                        <Tooltip content={skill.name}>
+                                            <div className="block-container w-20 h-20" key={index}>
+                                                <div className="btn-back rounded-xl" />
+                                                <div className="btn-front rounded-xl flex justify-center items-center">
+                                                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                                </div>
                                             </div>
-                                        </div>
+                                        </Tooltip>
                                     ))}
                                 </div>
                             </div>
@@ -79,12 +90,14 @@ const About = () => {
                                 <h3 className="sub-subhead-text">Backend</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
                                     {showcaseSkills.Backend.map((skill, index) => (
-                                        <div className="block-container w-20 h-20" key={index}>
-                                            <div className="btn-back rounded-xl" />
-                                            <div className="btn-front rounded-xl flex justify-center items-center">
-                                                <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                        <Tooltip content={skill.name}>
+                                            <div className="block-container w-20 h-20" key={index}>
+                                                <div className="btn-back rounded-xl" />
+                                                <div className="btn-front rounded-xl flex justify-center items-center">
+                                                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                                </div>
                                             </div>
-                                        </div>
+                                        </Tooltip>
                                     ))}
                                 </div>
                             </div>
@@ -93,12 +106,14 @@ const About = () => {
                                 <h3 className="sub-subhead-text">Database</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
                                     {showcaseSkills.Database.map((skill, index) => (
-                                        <div className="block-container w-20 h-20" key={index}>
-                                            <div className="btn-back rounded-xl" />
-                                            <div className="btn-front rounded-xl flex justify-center items-center">
-                                                <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                        <Tooltip content={skill.name}>
+                                            <div className="block-container w-20 h-20" key={index}>
+                                                <div className="btn-back rounded-xl" />
+                                                <div className="btn-front rounded-xl flex justify-center items-center">
+                                                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                                </div>
                                             </div>
-                                        </div>
+                                        </Tooltip>
                                     ))}
                                 </div>
                             </div>
@@ -107,12 +122,14 @@ const About = () => {
                                 <h3 className="sub-subhead-text">Version Control</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
                                     {showcaseSkills['Version Control'].map((skill, index) => (
-                                        <div className="block-container w-20 h-20" key={index}>
-                                            <div className="btn-back rounded-xl" />
-                                            <div className="btn-front rounded-xl flex justify-center items-center">
-                                                <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                        <Tooltip content={skill.name}>
+                                            <div className="block-container w-20 h-20" key={index}>
+                                                <div className="btn-back rounded-xl" />
+                                                <div className="btn-front rounded-xl flex justify-center items-center">
+                                                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                                </div>
                                             </div>
-                                        </div>
+                                        </Tooltip>
                                     ))}
                                 </div>
                             </div>
@@ -121,12 +138,14 @@ const About = () => {
                                 <h3 className="sub-subhead-text">Application</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
                                     {showcaseSkills.Application.map((skill, index) => (
-                                        <div className="block-container w-20 h-20" key={index}>
-                                            <div className="btn-back rounded-xl" />
-                                            <div className="btn-front rounded-xl flex justify-center items-center">
-                                                <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                        <Tooltip content={skill.name}>
+                                            <div className="block-container w-20 h-20" key={index}>
+                                                <div className="btn-back rounded-xl" />
+                                                <div className="btn-front rounded-xl flex justify-center items-center">
+                                                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                                </div>
                                             </div>
-                                        </div>
+                                        </Tooltip>
                                     ))}
                                 </div>
                             </div>
@@ -135,12 +154,14 @@ const About = () => {
                                 <h3 className="sub-subhead-text">AI</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
                                     {showcaseSkills.AI.map((skill, index) => (
-                                        <div className="block-container w-20 h-20" key={index}>
-                                            <div className="btn-back rounded-xl" />
-                                            <div className="btn-front rounded-xl flex justify-center items-center">
-                                                <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                        <Tooltip content={skill.name}>
+                                            <div className="block-container w-20 h-20" key={index}>
+                                                <div className="btn-back rounded-xl" />
+                                                <div className="btn-front rounded-xl flex justify-center items-center">
+                                                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                                </div>
                                             </div>
-                                        </div>
+                                        </Tooltip>
                                     ))}
                                 </div>
                             </div>
@@ -149,12 +170,14 @@ const About = () => {
                                 <h3 className="sub-subhead-text">Operating Systems</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
                                     {showcaseSkills.OS.map((skill, index) => (
-                                        <div className="block-container w-20 h-20" key={index}>
-                                            <div className="btn-back rounded-xl" />
-                                            <div className="btn-front rounded-xl flex justify-center items-center">
-                                                <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                        <Tooltip content={skill.name}>
+                                            <div className="block-container w-20 h-20" key={index}>
+                                                <div className="btn-back rounded-xl" />
+                                                <div className="btn-front rounded-xl flex justify-center items-center">
+                                                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                                </div>
                                             </div>
-                                        </div>
+                                        </Tooltip>
                                     ))}
                                 </div>
                             </div>
