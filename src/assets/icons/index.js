@@ -24,6 +24,19 @@ import summiz from './summiz.svg'
 import threads from './threads.svg'
 import arrow from './arrow.svg'
 import contact from './contact.svg'
+import angular from './angular.svg'
+import vue from './vue.svg'
+import php from './php.svg'
+import python from './python.svg'
+import java from './java.svg'
+import flutter from './flutter.svg'
+import mysql from './mysql.svg'
+import debian from './debian.svg'
+import ubuntu from './ubuntu.svg'
+import kali from './kali.svg'
+import windows from './windows.svg'
+import gitlab from './gitlab.svg'
+
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
 
@@ -54,6 +67,19 @@ export {
     threads,
     arrow,
     contact,
+    angular,
+    vue,
+    php,
+    python,
+    java,
+    flutter,
+    mysql,
+    debian,
+    ubuntu,
+    kali,
+    windows,
+    gitlab,
+
     soundon,
     soundoff
 }

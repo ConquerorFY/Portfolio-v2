@@ -11,19 +11,29 @@ import {
     javascript,
     linkedin,
     mongodb,
-    motion,
     mui,
     nextjs,
     nodejs,
     pricewise,
     react,
     redux,
-    sass,
     snapgram,
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    angular,
+    vue,
+    php,
+    python,
+    java,
+    flutter,
+    mysql,
+    ubuntu,
+    debian,
+    kali,
+    windows,
+    gitlab,
 } from "../assets/icons";
 
 export const skills = [
@@ -48,6 +58,11 @@ export const skills = [
         type: "Version Control",
     },
     {
+        imageUrl: gitlab,
+        name: "GitLab",
+        type: "Version Control",
+    },
+    {
         imageUrl: html,
         name: "HTML",
         type: "Frontend",
@@ -61,11 +76,6 @@ export const skills = [
         imageUrl: mongodb,
         name: "MongoDB",
         type: "Database",
-    },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
     },
     {
         imageUrl: mui,
@@ -88,16 +98,6 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
-    {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
         type: "Frontend",
@@ -106,7 +106,62 @@ export const skills = [
         imageUrl: typescript,
         name: "TypeScript",
         type: "Frontend",
-    }
+    },
+    {
+        imageUrl: angular,
+        name: "Angular",
+        type: "Frontend"
+    },
+    {
+        imageUrl: vue,
+        name: "Vue",
+        type: "Frontend"
+    },
+    {
+        imageUrl: php,
+        name: "PHP",
+        type: "Backend"
+    },
+    {
+        imageUrl: python,
+        name: "Python",
+        type: ["Backend", "AI"]
+    },
+    {
+        imageUrl: java,
+        name: "Java",
+        type: ["Backend", "Application"]
+    },
+    {
+        imageUrl: flutter,
+        name: "Flutter",
+        type: "Application"
+    },
+    {
+        imageUrl: mysql,
+        name: "MySQL",
+        type: "Database",
+    },
+    {
+        imageUrl: debian,
+        name: "Debian Linux",
+        type: "OS",
+    },
+    {
+        imageUrl: ubuntu,
+        name: "Ubuntu Linux",
+        type: "OS",
+    },
+    {
+        imageUrl: kali,
+        name: "Kali Linux",
+        type: "OS",
+    },
+    {
+        imageUrl: windows,
+        name: "Microsoft Windows",
+        type: "OS",
+    },
 ];
 
 export const experiences = [
