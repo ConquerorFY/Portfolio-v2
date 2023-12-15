@@ -37,7 +37,7 @@ const Projects = () => {
                             </p>
                             <div className="mt-5 flex items-center gap-2 font-poppins">
                                 <Link to={project.link} target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-600">
-                                    Live Link
+                                    Check it out
                                 </Link>
                                 <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
                             </div>

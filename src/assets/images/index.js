@@ -9,6 +9,7 @@ import magik from './magik.png'
 import freelance from './freelance.png'
 import blue from './blue.png'
 import logo from './logo.svg'
+import loading from './loading.gif'
 
 export {
     hero,
@@ -21,5 +22,6 @@ export {
     magik,
     freelance,
     blue,
-    logo
+    logo,
+    loading
 }
