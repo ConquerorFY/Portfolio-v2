@@ -51,7 +51,7 @@ const Projects = () => {
                     ... and many more!
                 </p>
                 <p>
-                    Follow my Github repository for more!
+                    Follow my Github & LinkedIn account for more!
                 </p>
                 <div className="flex flex-row justify-evenly mt-3">
                     {

@@ -1,14 +1,12 @@
 import React from "react";
+import { Alert } from "flowbite-react";
 
-const Alert = ({ type, text }) => {
+const AlertBox = ({ type, text }) => {
     return (
-        <div className="absolute top-10 left-0 right-0 flex justify-center items-center">
-            <div className={`${type === 'danger' ? 'bg-red-800' : 'bg-blue-800'} p-2 text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex items-center`} role="alert">
-                <p className={`${type === 'danger' ? 'bg-red-500' : 'bg-blue-500'} flex rounded-full uppercase px-2 py-1 font-semibold mr-3 text-xs`}>{type === 'danger' ? 'Failed' : 'Success'}</p>
-                <p className="mr-2 text-left">{text}</p>
-            </div>
-        </div>
+        <Alert color={type} className="absolute top-16 w-max left-[50%] translate-x-[-50%]">
+            <span className="font-medium">Info alert!</span> {text}
+        </Alert>
     )
 }
 
-export default Alert;
+export default AlertBox;

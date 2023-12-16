@@ -1,10 +1,10 @@
 import React, { Suspense, useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import { Canvas } from "@react-three/fiber";
-import Loader from "../components/Loader";
+import Loader from "../components/Loader2";
 import Fox from "../models/Fox";
 import useAlert from "../hooks/useAlert";
-import Alert from "../components/Alert";
+import AlertBox from "../components/Alert";
 
 const Contact = () => {
     const formRef = useRef(null);
@@ -52,13 +52,13 @@ const Contact = () => {
             setIsLoading(false);
             setCurrentAnimation('idle');
             console.log(error);
-            showAlert({ show: true, text: "I didn't receive your message", type: 'danger' });
+            showAlert({ show: true, text: "I didn't receive your message", type: 'failure' });
         });
     };
 
     return (
         <section className="relative flex lg:flex-row flex-col max-container h-[100vh]">
-            {alert.show && <Alert {...alert} />}
+            {alert.show && <AlertBox {...alert} />}
 
             <div className="flex-1 min-w-[50%] flex flex-col">
                 <h1 className="head-text">Get in Touch</h1>
@@ -128,7 +128,7 @@ const Contact = () => {
                 >
                     <directionalLight intensity={2.5} position={[0, 0, 1]} />
                     <ambientLight intensity={0.5} />
-                    <Suspense fallback={null}>
+                    <Suspense fallback={<Loader />}>
                         <Fox
                             currentAnimation={currentAnimation}
                             position={[0.5, 0.35, 0]}
