@@ -12,14 +12,14 @@ import { Tooltip } from "flowbite-react";
 const customControlTheme = {
     "indicators": {
         "active": {
-            "off": "bg-slate-400/50 hover:bg-slate-600 dark:bg-gray-800/50 dark:hover:bg-gray-800",
-            "on": "bg-slate-800 dark:bg-gray-800"
+            "off": "bg-slate-300/50 hover:bg-slate-400 dark:bg-gray-600/50 dark:hover:bg-gray-600",
+            "on": "bg-slate-400 dark:bg-gray-400"
         },
         "base": "h-3 w-3 rounded-full",
         "wrapper": "absolute bottom-5 left-1/2 flex -translate-x-1/2 space-x-3"
     },
     "control": {
-        "base": "inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-300/30 group-hover:bg-slate-300/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-slate-100 dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 sm:h-10 sm:w-10",
+        "base": "inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-100/30 group-hover:bg-slate-200/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-slate-100 dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 sm:h-10 sm:w-10",
         "icon": "h-5 w-5 text-black dark:text-gray-800 sm:h-6 sm:w-6"
     }
 }
@@ -56,7 +56,7 @@ const About = () => {
         return (
             <section className="max-container">
                 <h1 className="head-text">
-                    Hello, I'm <span className="blue-gradient_text font-semibold drop-shadow">Ryan</span>
+                    Hello, I'm <span className="blue-gradient_text font-semibold drop-shadow">Ryan Lim Fang Yung</span>
                 </h1>
 
                 <div className="mt-5 flex felx-col gap-3 text-slate-500">
@@ -68,7 +68,7 @@ const About = () => {
                 <div className="py-10 pb-5 flex flex-col">
                     <h3 className="subhead-text">My Skills</h3>
 
-                    <div className="h-[300px] mt-16">
+                    <div className="md:h-[300px] sm:h-[500px] h-[700px] mt-16">
                         <Carousel theme={customControlTheme} slideInterval={5000}>
                             <div className="flex flex-col h-full items-start justify-start px-5">
                                 <h3 className="sub-subhead-text">Frontend</h3>
