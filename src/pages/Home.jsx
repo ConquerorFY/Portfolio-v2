@@ -10,6 +10,8 @@ import HomeInfo from "../components/HomeInfo";
 
 import sakura from '../assets/sakura.mp3';
 import { soundon, soundoff } from "../assets/icons";
+import NightSky from "../models/NightSky";
+import useDarkModeContext from "../hooks/useDarkMode";
 
 const Home = ({ isLoaded, setIsLoaded }) => {
     const audioRef = useRef(new Audio(sakura));
@@ -18,6 +20,7 @@ const Home = ({ isLoaded, setIsLoaded }) => {
     const [isRotating, setIsRotating] = useState(false);
     const [currentStage, setCurrentStage] = useState(1);
     const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+    const { isDarkMode } = useDarkModeContext();
 
     useEffect(() => {
         setIsLoaded(false);
@@ -84,9 +87,8 @@ const Home = ({ isLoaded, setIsLoaded }) => {
                         <ambientLight intensity={0.5} />
                         <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
                         <Bird />
-                        <Sky
-                            isRotating={isRotating}
-                        />
+                        <NightSky isRotating={isRotating} isVisible={isDarkMode} />
+                        <Sky isRotating={isRotating} isVisible={!isDarkMode} />
                         <Island
                             position={islandPosition}
                             scale={islandScale}

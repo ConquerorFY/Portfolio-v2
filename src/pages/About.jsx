@@ -20,7 +20,7 @@ const customControlTheme = {
     },
     "control": {
         "base": "inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-100/30 group-hover:bg-slate-200/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-slate-100 dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 sm:h-10 sm:w-10",
-        "icon": "h-5 w-5 text-black dark:text-gray-800 sm:h-6 sm:w-6"
+        "icon": "h-5 w-5 text-black dark:text-white sm:h-6 sm:w-6"
     }
 }
 
@@ -55,23 +55,23 @@ const About = () => {
     if (Object.keys(showcaseSkills).length > 0) {
         return (
             <section className="max-container">
-                <h1 className="head-text">
+                <h1 className="head-text dark:text-white">
                     Hello, I'm <span className="blue-gradient_text font-semibold drop-shadow">Ryan Lim Fang Yung</span>
                 </h1>
 
-                <div className="mt-5 flex felx-col gap-3 text-slate-500">
+                <div className="mt-5 flex felx-col gap-3 text-slate-500 dark:text-slate-200">
                     <p>
                         A software engineer based in Malaysia with great passionate for coding, problem-solving and eager to learn new technologies.
                     </p>
                 </div>
 
                 <div className="py-10 pb-5 flex flex-col">
-                    <h3 className="subhead-text">My Skills</h3>
+                    <h3 className="subhead-text dark:text-white">My Skills</h3>
 
                     <div className="md:h-[300px] sm:h-[500px] h-[700px] mt-16">
                         <Carousel theme={customControlTheme} slideInterval={5000}>
                             <div className="flex flex-col h-full items-start justify-start px-5">
-                                <h3 className="sub-subhead-text">Frontend</h3>
+                                <h3 className="sub-subhead-text dark:text-white">Frontend</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
                                     {showcaseSkills.Frontend.map((skill, index) => (
                                         <Tooltip content={skill.name} key={index}>
@@ -87,7 +87,7 @@ const About = () => {
                             </div>
 
                             <div className="flex flex-col h-full items-start justify-start px-5">
-                                <h3 className="sub-subhead-text">Backend</h3>
+                                <h3 className="sub-subhead-text dark:text-white">Backend</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
                                     {showcaseSkills.Backend.map((skill, index) => (
                                         <Tooltip content={skill.name} key={index}>
@@ -103,7 +103,7 @@ const About = () => {
                             </div>
 
                             <div className="flex flex-col h-full items-start justify-start px-5">
-                                <h3 className="sub-subhead-text">Database</h3>
+                                <h3 className="sub-subhead-text dark:text-white">Database</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
                                     {showcaseSkills.Database.map((skill, index) => (
                                         <Tooltip content={skill.name} key={index}>
@@ -119,7 +119,7 @@ const About = () => {
                             </div>
 
                             <div className="flex flex-col h-full items-start justify-start px-5">
-                                <h3 className="sub-subhead-text">Version Control</h3>
+                                <h3 className="sub-subhead-text dark:text-white">Version Control</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
                                     {showcaseSkills['Version Control'].map((skill, index) => (
                                         <Tooltip content={skill.name} key={index}>
@@ -135,7 +135,7 @@ const About = () => {
                             </div>
 
                             <div className="flex flex-col h-full items-start justify-start px-5">
-                                <h3 className="sub-subhead-text">Mobile Application</h3>
+                                <h3 className="sub-subhead-text dark:text-white">Mobile Application</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
                                     {showcaseSkills.Application.map((skill, index) => (
                                         <Tooltip content={skill.name} key={index}>
@@ -151,7 +151,7 @@ const About = () => {
                             </div>
 
                             <div className="flex flex-col h-full items-start justify-start px-5">
-                                <h3 className="sub-subhead-text">Artificial Intelligence</h3>
+                                <h3 className="sub-subhead-text dark:text-white">Artificial Intelligence</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
                                     {showcaseSkills.AI.map((skill, index) => (
                                         <Tooltip content={skill.name} key={index}>
@@ -167,7 +167,7 @@ const About = () => {
                             </div>
 
                             <div className="flex flex-col h-full items-start justify-start px-5">
-                                <h3 className="sub-subhead-text">Operating Systems</h3>
+                                <h3 className="sub-subhead-text dark:text-white">Operating Systems</h3>
                                 <div className="mt-8 flex flex-wrap gap-12">
                                     {showcaseSkills.OS.map((skill, index) => (
                                         <Tooltip content={skill.name} key={index}>
@@ -186,15 +186,15 @@ const About = () => {
                 </div>
 
                 <div className="py-16">
-                    <h3 className="subhead-text">Work Experience</h3>
-                    <div className="mt-5 flex felx-col gap-3 text-slate-500">
+                    <h3 className="subhead-text dark:text-white">Work Experience</h3>
+                    <div className="mt-5 flex felx-col gap-3 text-slate-500 dark:text-slate-200">
                         <p>
                             I've worked with different individuals and companies these past few years.
                             Here's the rundown:
                         </p>
                     </div>
 
-                    <div className="mt-12 flex">
+                    <div className="mt-12 flex dark:text-white">
                         <VerticalTimeline>
                             {experiences.map((experience) => (
                                 <VerticalTimelineElement

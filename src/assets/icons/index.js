@@ -36,6 +36,8 @@ import ubuntu from './ubuntu.svg'
 import kali from './kali.svg'
 import windows from './windows.svg'
 import gitlab from './gitlab.svg'
+import light from './light.svg'
+import dark from './dark.svg'
 
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
@@ -79,6 +81,8 @@ export {
     kali,
     windows,
     gitlab,
+    light,
+    dark,
 
     soundon,
     soundoff

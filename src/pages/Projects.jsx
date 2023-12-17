@@ -7,11 +7,11 @@ import CTA from "../components/CTA";
 const Projects = () => {
     return (
         <section className="max-container">
-            <h1 className="head-text">
+            <h1 className="head-text dark:text-white">
                 My <span className="blue-gradient_text font-semibold drop-shadow">Projects</span>
             </h1>
 
-            <div className="mt-5 flex flex-col gap-3 text-slate-500">
+            <div className="mt-5 flex flex-col gap-3 text-slate-500 dark:text-slate-200">
                 <p>
                     I have undertaken various projects throughout the years of studying and working as a software engineer.
                     Most of them are open-source and available at my GitHub repository. Here are some of my projects:
@@ -29,10 +29,10 @@ const Projects = () => {
                         </div>
 
                         <div className="mt-5 flex flex-col">
-                            <h4 className="text-2xl font-poppins font-semibold">
+                            <h4 className="text-2xl font-poppins font-semibold dark:text-white">
                                 {project.name}
                             </h4>
-                            <p className="mt-2 text-slate-500">
+                            <p className="mt-2 text-slate-500 dark:text-slate-200">
                                 {project.description}
                             </p>
                             <div className="mt-5 flex items-center gap-2 font-poppins">
@@ -46,7 +46,7 @@ const Projects = () => {
                 ))}
             </div>
 
-            <div className="mb-20 flex flex-col gap-3 text-slate-500 sm:w-max">
+            <div className="mb-20 flex flex-col gap-3 text-slate-500 dark:text-slate-200 sm:w-max">
                 <p>
                     ... and many more!
                 </p>

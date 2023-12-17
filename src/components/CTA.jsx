@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const CTA = () => {
     return (
         <section className="cta">
-            <p className="cta-text">
+            <p className="cta-text dark:text-slate-200">
                 Want to connect? <br className="sm:block hidden" />
                 Let's get in touch right now!
             </p>

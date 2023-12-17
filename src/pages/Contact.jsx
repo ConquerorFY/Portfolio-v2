@@ -16,14 +16,14 @@ const Contact = () => {
     const { alert, showAlert, hideAlert } = useAlert();
 
     useEffect(() => {
-        const mediaQueryList = window.matchMedia('(max-width: 800px)');
+        const mediaQueryList = window.matchMedia('(max-width: 400px)');
         const handleMediaQueryChange = (event) => {
             setIsMobile(event.matches);
         }
-        mediaQueryList.addListener(handleMediaQueryChange);
+        mediaQueryList.addEventListener("change", handleMediaQueryChange);
         // Clean up the listener when the component unmounts
         return () => {
-            mediaQueryList.removeListener(handleMediaQueryChange);
+            mediaQueryList.removeEventListener("change", handleMediaQueryChange);
         };
     }, [])
 
@@ -73,11 +73,11 @@ const Contact = () => {
         <section className="relative flex lg:flex-row flex-col max-container 2xl:h-[100vh]">
             {alert.show && <AlertBox {...alert} />}
 
-            <div className="flex-1 min-w-[50%] flex flex-col">
+            <div className="flex-1 min-w-[50%] flex flex-col dark:text-white">
                 <h1 className="head-text">Get in Touch</h1>
 
                 <form className="w-full flex flex-col gap-7 mt-14" onSubmit={handleSubmit}>
-                    <label className="text-black-500 font-semibold">
+                    <label className="text-black-500 dark:text-white font-semibold">
                         Name
                         <input
                             type="text"
@@ -91,7 +91,7 @@ const Contact = () => {
                             onBlur={handleBlur}
                         />
                     </label>
-                    <label className="text-black-500 font-semibold">
+                    <label className="text-black-500 dark:text-white font-semibold">
                         Email
                         <input
                             type="email"
@@ -105,7 +105,7 @@ const Contact = () => {
                             onBlur={handleBlur}
                         />
                     </label>
-                    <label className="text-black-500 font-semibold">
+                    <label className="text-black-500 dark:text-white font-semibold">
                         Your Message
                         <textarea
                             name="message"
