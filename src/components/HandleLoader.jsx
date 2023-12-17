@@ -4,7 +4,7 @@ const HandleLoader = ({ setIsLoaded }) => {
     useEffect(() => {
         setTimeout(() => {
             setIsLoaded(true);
-        }, 2800);
+        }, 5000);
     }, [])
 
     return <></>

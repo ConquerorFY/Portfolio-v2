@@ -26,7 +26,7 @@ const Home = ({ isLoaded, setIsLoaded }) => {
         setIsLoaded(false);
         setTimeout(() => {
             setIsLoaded(true);
-        }, 2800)
+        }, 5000)
     }, []);
 
     useEffect(() => {
