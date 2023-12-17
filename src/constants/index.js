@@ -1,7 +1,6 @@
 import { blue, freelance, hilti, magik, sunway } from "../assets/images";
 import {
     car,
-    contact,
     css,
     estate,
     express,
@@ -224,7 +223,7 @@ export const experiences = [
         date: "Mar 2022 - Now",
         points: [
             "Worked on creating web pages in React Next.js framework based on different wireframe designs",
-            "Worked on creating full stack web applications using Angular.js, Expree.js and MongoDB",
+            "Worked on creating full stack web applications using Angular.js, Express.js and MongoDB",
             "Worked on creating desktop applications using Java NetBeans",
             "Worked on creating systems using Bash",
             "Worked on creating Android applications using Android Studio and Flutter"

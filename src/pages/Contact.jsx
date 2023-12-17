@@ -1,4 +1,4 @@
-import React, { Suspense, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader2";
@@ -11,8 +11,21 @@ const Contact = () => {
     const [form, setForm] = useState({ name: '', email: '', message: '' });
     const [isLoading, setIsLoading] = useState(false);
     const [currentAnimation, setCurrentAnimation] = useState('idle');
+    const [isMobile, setIsMobile] = useState(false);
 
     const { alert, showAlert, hideAlert } = useAlert();
+
+    useEffect(() => {
+        const mediaQueryList = window.matchMedia('(max-width: 800px)');
+        const handleMediaQueryChange = (event) => {
+            setIsMobile(event.matches);
+        }
+        mediaQueryList.addListener(handleMediaQueryChange);
+        // Clean up the listener when the component unmounts
+        return () => {
+            mediaQueryList.removeListener(handleMediaQueryChange);
+        };
+    }, [])
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value })
@@ -57,7 +70,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="relative flex lg:flex-row flex-col max-container h-[100vh]">
+        <section className="relative flex lg:flex-row flex-col max-container 2xl:h-[100vh]">
             {alert.show && <AlertBox {...alert} />}
 
             <div className="flex-1 min-w-[50%] flex flex-col">
@@ -117,27 +130,28 @@ const Contact = () => {
                 </form>
             </div>
 
-            <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
-                <Canvas
-                    camera={{
-                        position: [0, 0, 5],
-                        fov: 75,
-                        near: 0.1,
-                        far: 1000
-                    }}
-                >
-                    <directionalLight intensity={2.5} position={[0, 0, 1]} />
-                    <ambientLight intensity={0.5} />
-                    <Suspense fallback={<Loader />}>
-                        <Fox
-                            currentAnimation={currentAnimation}
-                            position={[0.5, 0.35, 0]}
-                            rotation={[12.6, -0.6, 0]}
-                            scale={[0.5, 0.5, 0.5]}
-                        />
-                    </Suspense>
-                </Canvas>
-            </div>
+            {!isMobile ?
+                <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
+                    <Canvas
+                        camera={{
+                            position: [0, 0, 5],
+                            fov: 75,
+                            near: 0.1,
+                            far: 1000
+                        }}
+                    >
+                        <directionalLight intensity={2.5} position={[0, 0, 1]} />
+                        <ambientLight intensity={0.5} />
+                        <Suspense fallback={<Loader />}>
+                            <Fox
+                                currentAnimation={currentAnimation}
+                                position={[0.5, 0.35, 0]}
+                                rotation={[12.6, -0.6, 0]}
+                                scale={[0.5, 0.5, 0.5]}
+                            />
+                        </Suspense>
+                    </Canvas>
+                </div> : ''}
         </section>
     )
 }
