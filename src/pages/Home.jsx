@@ -83,9 +83,9 @@ const Home = ({ isLoaded, setIsLoaded }) => {
                     camera={{ near: 0.1, far: 1000 }}
                 >
                     <Suspense fallback={<HandleLoader setIsLoaded={setIsLoaded} />}>
-                        <directionalLight position={[1, 1, 1]} intensity={2} />
-                        <ambientLight intensity={0.5} />
-                        <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
+                        <directionalLight position={[1, 1, 1]} intensity={isDarkMode ? 1 : 2} />
+                        <ambientLight intensity={isDarkMode ? 0 : 1} />
+                        <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={0.5} />
                         <Bird />
                         <NightSky isRotating={isRotating} isVisible={isDarkMode} />
                         <Sky isRotating={isRotating} isVisible={!isDarkMode} />

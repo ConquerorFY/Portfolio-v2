@@ -193,7 +193,7 @@ export const experiences = [
         title: "Software Developer",
         company_name: "Magik Tech Sdn Bhd",
         icon: magik,
-        iconBg: "#ffffff",
+        iconBg: "#ffaaee",
         date: "Jul 2021 - Dec 2021",
         points: [
             "Create web pages for systems using Vue.js",
@@ -219,7 +219,7 @@ export const experiences = [
         title: "Freelance Programmer / Software Developer",
         company_name: "Remote",
         icon: freelance,
-        iconBg: "#b123af",
+        iconBg: "#ccffff",
         date: "Mar 2022 - Now",
         points: [
             "Worked on creating web pages in React Next.js framework based on different wireframe designs",

@@ -8,6 +8,7 @@ import { skills, experiences } from "../constants";
 import { Carousel } from 'flowbite-react';
 import CTA from "../components/CTA";
 import { Tooltip } from "flowbite-react";
+import useDarkModeContext from "../hooks/useDarkMode";
 
 const customControlTheme = {
     "indicators": {
@@ -26,6 +27,7 @@ const customControlTheme = {
 
 const About = () => {
     const [showcaseSkills, setShowcaseSkills] = useState({});
+    const {isDarkMode} = useDarkModeContext();
 
     useEffect(() => {
         let skillsCategorization = {};
@@ -76,8 +78,8 @@ const About = () => {
                                     {showcaseSkills.Frontend.map((skill, index) => (
                                         <Tooltip content={skill.name} key={index}>
                                             <div className="block-container w-20 h-20">
-                                                <div className="btn-back rounded-xl" />
-                                                <div className="btn-front rounded-xl flex justify-center items-center">
+                                                <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
                                                     <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                 </div>
                                             </div>
@@ -92,8 +94,8 @@ const About = () => {
                                     {showcaseSkills.Backend.map((skill, index) => (
                                         <Tooltip content={skill.name} key={index}>
                                             <div className="block-container w-20 h-20">
-                                                <div className="btn-back rounded-xl" />
-                                                <div className="btn-front rounded-xl flex justify-center items-center">
+                                                <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
                                                     <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                 </div>
                                             </div>
@@ -108,8 +110,8 @@ const About = () => {
                                     {showcaseSkills.Database.map((skill, index) => (
                                         <Tooltip content={skill.name} key={index}>
                                             <div className="block-container w-20 h-20">
-                                                <div className="btn-back rounded-xl" />
-                                                <div className="btn-front rounded-xl flex justify-center items-center">
+                                                <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
                                                     <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                 </div>
                                             </div>
@@ -124,8 +126,8 @@ const About = () => {
                                     {showcaseSkills['Version Control'].map((skill, index) => (
                                         <Tooltip content={skill.name} key={index}>
                                             <div className="block-container w-20 h-20">
-                                                <div className="btn-back rounded-xl" />
-                                                <div className="btn-front rounded-xl flex justify-center items-center">
+                                                <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
                                                     <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                 </div>
                                             </div>
@@ -140,8 +142,8 @@ const About = () => {
                                     {showcaseSkills.Application.map((skill, index) => (
                                         <Tooltip content={skill.name} key={index}>
                                             <div className="block-container w-20 h-20">
-                                                <div className="btn-back rounded-xl" />
-                                                <div className="btn-front rounded-xl flex justify-center items-center">
+                                                <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
                                                     <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                 </div>
                                             </div>
@@ -156,8 +158,8 @@ const About = () => {
                                     {showcaseSkills.AI.map((skill, index) => (
                                         <Tooltip content={skill.name} key={index}>
                                             <div className="block-container w-20 h-20">
-                                                <div className="btn-back rounded-xl" />
-                                                <div className="btn-front rounded-xl flex justify-center items-center">
+                                                <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
                                                     <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                 </div>
                                             </div>
@@ -172,8 +174,8 @@ const About = () => {
                                     {showcaseSkills.OS.map((skill, index) => (
                                         <Tooltip content={skill.name} key={index}>
                                             <div className="block-container w-20 h-20">
-                                                <div className="btn-back rounded-xl" />
-                                                <div className="btn-front rounded-xl flex justify-center items-center">
+                                                <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
                                                     <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                 </div>
                                             </div>

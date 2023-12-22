@@ -3,8 +3,11 @@ import { projects, socialLinks } from "../constants";
 import { Link } from "react-router-dom";
 import { arrow } from "../assets/icons";
 import CTA from "../components/CTA";
+import useDarkModeContext from "../hooks/useDarkMode";
 
 const Projects = () => {
+    const { isDarkMode } = useDarkModeContext();
+
     return (
         <section className="max-container">
             <h1 className="head-text dark:text-white">
@@ -22,7 +25,7 @@ const Projects = () => {
                 {projects.map((project) => (
                     <div className="lg:w-[400px] w-full" key={project.name}>
                         <div className="block-container w-12 h-12">
-                            <div className={`btn-back rounded-xl ${project.theme}`} />
+                            <div className={`${isDarkMode ? 'btn-back-project-dark' : 'btn-back'} rounded-xl ${project.theme}`} />
                             <div className="btn-front rounded-xl flex justify-center items-center">
                                 <img src={project.iconUrl} alt="Project Icon" className="w-1/2 h-1/2 object-contain" />
                             </div>
@@ -58,8 +61,8 @@ const Projects = () => {
                         socialLinks.map((link, index) => (
                             <Link to={link.link} key={index} target="_blank" rel="noopener noreferrer">
                                 <div className="block-container w-14 h-14">
-                                    <div className="btn-back rounded-xl" />
-                                    <div className="btn-front rounded-xl flex justify-center items-center">
+                                    <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                    <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
                                         <img src={link.iconUrl} alt={link.name} className="w-1/2 h-1/2 object-contain" />
                                     </div>
                                 </div>
