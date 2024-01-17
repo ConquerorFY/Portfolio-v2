@@ -27,10 +27,46 @@ const customControlTheme = {
 
 const About = () => {
     const [showcaseSkills, setShowcaseSkills] = useState({});
-    const {isDarkMode} = useDarkModeContext();
+    const [toReload, setToReload] = useState(true);
+    const { isDarkMode } = useDarkModeContext();
 
     useEffect(() => {
         let skillsCategorization = {};
+
+        function loadTimelineDarkTheme() {
+            const verticalElements = document.querySelectorAll('.vertical-timeline-element-content');
+            const verticalElementsTitle = document.querySelectorAll('.vertical-timeline-element-content h3');
+            const verticalElementsCompany = document.querySelectorAll('.vertical-timeline-element-content p');
+            const verticalElementsPoints = document.querySelectorAll('.vertical-timeline-element-content li');
+            if (isDarkMode) {
+                verticalElements.forEach((el) => {
+                    el.style.background = "rgb(8,13,23)";
+                });
+                verticalElementsTitle.forEach((el) => {
+                    el.style.color = "white";
+                });
+                verticalElementsCompany.forEach((el) => {
+                    el.style.color = "white";
+                });
+                verticalElementsPoints.forEach((el) => {
+                    el.style.color = "white";
+                });
+            } else {
+                verticalElements.forEach((el) => {
+                    el.style.background = "";
+                });
+                verticalElementsTitle.forEach((el) => {
+                    el.style.color = "";
+                });
+                verticalElementsCompany.forEach((el) => {
+                    el.style.color = "";
+                });
+                verticalElementsPoints.forEach((el) => {
+                    el.style.color = "";
+                });
+            }
+        }
+
         skills.forEach((skill) => {
             let skillTypes = [];
             if (typeof skill.type === "string") {
@@ -49,12 +85,14 @@ const About = () => {
                     skillsCategorization = { ...skillsCategorization, [skillType]: [skill] };
                 }
             }
-
             setShowcaseSkills(skillsCategorization);
         });
-    }, [skills])
+
+        loadTimelineDarkTheme();
+    }, [skills, isDarkMode, toReload])
 
     if (Object.keys(showcaseSkills).length > 0) {
+        if (toReload) setToReload(false);
         return (
             <section className="max-container">
                 <h1 className="head-text dark:text-white">
