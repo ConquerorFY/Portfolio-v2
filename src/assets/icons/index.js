@@ -38,6 +38,7 @@ import windows from './windows.svg'
 import gitlab from './gitlab.svg'
 import light from './light.svg'
 import dark from './dark.svg'
+import resume from './resume.svg'
 
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
@@ -83,6 +84,7 @@ export {
     gitlab,
     light,
     dark,
+    resume,
 
     soundon,
     soundoff

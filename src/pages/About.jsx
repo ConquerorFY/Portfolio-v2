@@ -9,6 +9,8 @@ import { Carousel } from 'flowbite-react';
 import CTA from "../components/CTA";
 import { Tooltip } from "flowbite-react";
 import useDarkModeContext from "../hooks/useDarkMode";
+import { resume } from "../assets/icons";
+import { cv } from "../assets/files";
 
 const customControlTheme = {
     "indicators": {
@@ -91,6 +93,15 @@ const About = () => {
         loadTimelineDarkTheme();
     }, [skills, isDarkMode, toReload])
 
+    const handleCVDownload = () => {
+        const link = document.createElement('a');
+        link.href = cv;
+        link.download = 'ryan-cv.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
     if (Object.keys(showcaseSkills).length > 0) {
         if (toReload) setToReload(false);
         return (
@@ -103,6 +114,10 @@ const About = () => {
                     <p>
                         A software engineer based in Malaysia with great passionate for coding, problem-solving and eager to learn new technologies.
                     </p>
+                </div>
+                <div className="mt-[10px] mb-[40px] download-btn" onClick={handleCVDownload} title="Click to download my CV">
+                    <img src={resume} alt="resume" className="w-[20px] mr-[10px]" />
+                    <span>My CV</span>
                 </div>
 
                 <div className="py-10 pb-5 flex flex-col">
