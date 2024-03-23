@@ -1,4 +1,4 @@
-import { blue, freelance, hilti, magik, sunway } from "../assets/images";
+import { acodes, blue, freelance, hilti, magik, sunway } from "../assets/images";
 import {
     car,
     css,
@@ -32,6 +32,15 @@ import {
     kali,
     windows,
     gitlab,
+    nestjs,
+    firebase,
+    expo,
+    django,
+    flask,
+    tensorflow,
+    opencv,
+    numpy,
+    spring,
 } from "../assets/icons";
 
 export const skills = [
@@ -83,7 +92,17 @@ export const skills = [
     {
         imageUrl: nextjs,
         name: "Next.js",
-        type: "Frontend",
+        type: ["Frontend", "Backend"],
+    },
+    {
+        imageUrl: nestjs,
+        name: "Nest.js",
+        type: "Backend",
+    },
+    {
+        imageUrl: firebase,
+        name: "Firebase",
+        type: ["Backend", "Database"]
     },
     {
         imageUrl: nodejs,
@@ -126,9 +145,24 @@ export const skills = [
         type: ["Backend", "AI"]
     },
     {
+        imageUrl: django,
+        name: "Django",
+        type: "Backend"
+    },
+    {
+        imageUrl: flask,
+        name: "Flask",
+        type: "Backend"
+    },
+    {
         imageUrl: java,
         name: "Java",
         type: ["Backend", "Application"]
+    },
+    {
+        imageUrl: spring,
+        name: "Spring",
+        type: "Backend",
     },
     {
         imageUrl: flutter,
@@ -136,9 +170,34 @@ export const skills = [
         type: "Application"
     },
     {
+        imageUrl: expo,
+        name: "Expo",
+        type: "Application"
+    },
+    {
+        imageUrl: react,
+        name: "React Native",
+        type: "Application"
+    },
+    {
         imageUrl: mysql,
         name: "MySQL",
         type: "Database",
+    },
+    {
+        imageUrl: tensorflow,
+        name: "Tensorflow",
+        type: "AI",
+    },
+    {
+        imageUrl: opencv,
+        name: "OpenCV",
+        type: "AI"
+    },
+    {
+        imageUrl: numpy,
+        name: "Numpy",
+        type: "AI"
     },
     {
         imageUrl: debian,
@@ -176,7 +235,7 @@ export const experiences = [
         ],
     },
     {
-        title: "Software Engineer Intern",
+        title: "Software Engineer (Internship)",
         company_name: "Blue Ocean IT Sdn Bhd",
         icon: blue,
         iconBg: "#fbc3bc",
@@ -190,7 +249,7 @@ export const experiences = [
         ],
     },
     {
-        title: "Software Developer",
+        title: "Software Engineer",
         company_name: "Magik Tech Sdn Bhd",
         icon: magik,
         iconBg: "#ffaaee",
@@ -216,7 +275,20 @@ export const experiences = [
         ],
     },
     {
-        title: "Freelance Programmer / Software Developer",
+        title: "Frontend Web Developer",
+        company_name: "Acodes Sdn Bhd",
+        icon: acodes,
+        iconBg: "#a2efa2",
+        date: "Aug 2023 - Feb 2024",
+        points: [
+            "Worked on designing new web pages using React Next.js framework and Tailwind CSS",
+            "Worked on integrating APIs using React Query",
+            "Worked on handling data state management using Redux",
+            "Helped in designing solution architecture for web systems"
+        ],
+    },
+    {
+        title: "Full Stack Developer (Freelance)",
         company_name: "Remote",
         icon: freelance,
         iconBg: "#ccffff",

@@ -123,7 +123,7 @@ const About = () => {
                 <div className="py-10 pb-5 flex flex-col">
                     <h3 className="subhead-text dark:text-white">My Skills</h3>
 
-                    <div className="md:h-[300px] sm:h-[500px] h-[700px] mt-16">
+                    <div className="md:h-[300px] sm:h-[500px] h-[850px] mt-16">
                         <Carousel theme={customControlTheme} slideInterval={5000}>
                             <div className="flex flex-col h-full items-start justify-start px-5">
                                 <h3 className="sub-subhead-text dark:text-white">Frontend</h3>

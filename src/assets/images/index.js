@@ -10,6 +10,7 @@ import freelance from './freelance.png'
 import blue from './blue.png'
 import logo from './logo.svg'
 import loading from './loading.gif'
+import acodes from './acodes.png'
 
 export {
     hero,
@@ -23,5 +24,6 @@ export {
     freelance,
     blue,
     logo,
-    loading
+    loading,
+    acodes
 }
