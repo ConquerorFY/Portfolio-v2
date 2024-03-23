@@ -1,31 +1,19 @@
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import emailjs from '@emailjs/browser';
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader2";
 import Fox from "../models/Fox";
 import useAlert from "../hooks/useAlert";
 import AlertBox from "../components/Alert";
+import useMobileContext from "../hooks/useMobile";
 
 const Contact = () => {
-    const formRef = useRef(null);
     const [form, setForm] = useState({ name: '', email: '', message: '' });
     const [isLoading, setIsLoading] = useState(false);
     const [currentAnimation, setCurrentAnimation] = useState('idle');
-    const [isMobile, setIsMobile] = useState(false);
+    const { isMobile } = useMobileContext();
 
     const { alert, showAlert, hideAlert } = useAlert();
-
-    useEffect(() => {
-        const mediaQueryList = window.matchMedia('(max-width: 400px)');
-        const handleMediaQueryChange = (event) => {
-            setIsMobile(event.matches);
-        }
-        mediaQueryList.addEventListener("change", handleMediaQueryChange);
-        // Clean up the listener when the component unmounts
-        return () => {
-            mediaQueryList.removeEventListener("change", handleMediaQueryChange);
-        };
-    }, [])
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value })

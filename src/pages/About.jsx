@@ -11,6 +11,7 @@ import { Tooltip } from "flowbite-react";
 import useDarkModeContext from "../hooks/useDarkMode";
 import { resume } from "../assets/icons";
 import { cv } from "../assets/files";
+import useMobileContext from "../hooks/useMobile";
 
 const customControlTheme = {
     "indicators": {
@@ -29,8 +30,8 @@ const customControlTheme = {
 
 const About = () => {
     const [showcaseSkills, setShowcaseSkills] = useState({});
-    const [toReload, setToReload] = useState(true);
     const { isDarkMode } = useDarkModeContext();
+    const { isMobile } = useMobileContext();
 
     useEffect(() => {
         let skillsCategorization = {};
@@ -91,7 +92,7 @@ const About = () => {
         });
 
         loadTimelineDarkTheme();
-    }, [skills, isDarkMode, toReload])
+    }, [skills, isDarkMode])
 
     const handleCVDownload = () => {
         const link = document.createElement('a');
@@ -103,7 +104,6 @@ const About = () => {
     }
 
     if (Object.keys(showcaseSkills).length > 0) {
-        if (toReload) setToReload(false);
         return (
             <section className="max-container">
                 <h1 className="head-text dark:text-white">
@@ -123,121 +123,237 @@ const About = () => {
                 <div className="py-10 pb-5 flex flex-col">
                     <h3 className="subhead-text dark:text-white">My Skills</h3>
 
-                    <div className="md:h-[300px] sm:h-[500px] h-[850px] mt-16">
-                        <Carousel theme={customControlTheme} slideInterval={5000}>
-                            <div className="flex flex-col h-full items-start justify-start px-5">
-                                <h3 className="sub-subhead-text dark:text-white">Frontend</h3>
-                                <div className="mt-8 flex flex-wrap gap-12">
-                                    {showcaseSkills.Frontend.map((skill, index) => (
-                                        <Tooltip content={skill.name} key={index}>
-                                            <div className="block-container w-20 h-20">
-                                                <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
-                                                <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
-                                                </div>
-                                            </div>
-                                        </Tooltip>
-                                    ))}
-                                </div>
-                            </div>
+                    {
+                        !isMobile
+                            ? <div className="md:h-[300px] h-[600px] mt-16">
+                                <Carousel theme={customControlTheme} slideInterval={5000}>
+                                    <div className="flex flex-col h-full items-start justify-start px-5">
+                                        <h3 className="sub-subhead-text dark:text-white">Frontend</h3>
+                                        <div className="mt-8 flex flex-wrap gap-12">
+                                            {showcaseSkills.Frontend.map((skill, index) => (
+                                                <Tooltip content={skill.name} key={index}>
+                                                    <div className="block-container w-20 h-20">
+                                                        <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                        <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                        </div>
+                                                    </div>
+                                                </Tooltip>
+                                            ))}
+                                        </div>
+                                    </div>
 
-                            <div className="flex flex-col h-full items-start justify-start px-5">
-                                <h3 className="sub-subhead-text dark:text-white">Backend</h3>
-                                <div className="mt-8 flex flex-wrap gap-12">
-                                    {showcaseSkills.Backend.map((skill, index) => (
-                                        <Tooltip content={skill.name} key={index}>
-                                            <div className="block-container w-20 h-20">
-                                                <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
-                                                <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
-                                                </div>
-                                            </div>
-                                        </Tooltip>
-                                    ))}
-                                </div>
-                            </div>
+                                    <div className="flex flex-col h-full items-start justify-start px-5">
+                                        <h3 className="sub-subhead-text dark:text-white">Backend</h3>
+                                        <div className="mt-8 flex flex-wrap gap-12">
+                                            {showcaseSkills.Backend.map((skill, index) => (
+                                                <Tooltip content={skill.name} key={index}>
+                                                    <div className="block-container w-20 h-20">
+                                                        <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                        <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                        </div>
+                                                    </div>
+                                                </Tooltip>
+                                            ))}
+                                        </div>
+                                    </div>
 
-                            <div className="flex flex-col h-full items-start justify-start px-5">
-                                <h3 className="sub-subhead-text dark:text-white">Database</h3>
-                                <div className="mt-8 flex flex-wrap gap-12">
-                                    {showcaseSkills.Database.map((skill, index) => (
-                                        <Tooltip content={skill.name} key={index}>
-                                            <div className="block-container w-20 h-20">
-                                                <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
-                                                <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
-                                                </div>
-                                            </div>
-                                        </Tooltip>
-                                    ))}
-                                </div>
-                            </div>
+                                    <div className="flex flex-col h-full items-start justify-start px-5">
+                                        <h3 className="sub-subhead-text dark:text-white">Database</h3>
+                                        <div className="mt-8 flex flex-wrap gap-12">
+                                            {showcaseSkills.Database.map((skill, index) => (
+                                                <Tooltip content={skill.name} key={index}>
+                                                    <div className="block-container w-20 h-20">
+                                                        <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                        <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                        </div>
+                                                    </div>
+                                                </Tooltip>
+                                            ))}
+                                        </div>
+                                    </div>
 
-                            <div className="flex flex-col h-full items-start justify-start px-5">
-                                <h3 className="sub-subhead-text dark:text-white">Version Control</h3>
-                                <div className="mt-8 flex flex-wrap gap-12">
-                                    {showcaseSkills['Version Control'].map((skill, index) => (
-                                        <Tooltip content={skill.name} key={index}>
-                                            <div className="block-container w-20 h-20">
-                                                <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
-                                                <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
-                                                </div>
-                                            </div>
-                                        </Tooltip>
-                                    ))}
-                                </div>
-                            </div>
+                                    <div className="flex flex-col h-full items-start justify-start px-5">
+                                        <h3 className="sub-subhead-text dark:text-white">Version Control</h3>
+                                        <div className="mt-8 flex flex-wrap gap-12">
+                                            {showcaseSkills['Version Control'].map((skill, index) => (
+                                                <Tooltip content={skill.name} key={index}>
+                                                    <div className="block-container w-20 h-20">
+                                                        <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                        <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                        </div>
+                                                    </div>
+                                                </Tooltip>
+                                            ))}
+                                        </div>
+                                    </div>
 
-                            <div className="flex flex-col h-full items-start justify-start px-5">
-                                <h3 className="sub-subhead-text dark:text-white">Mobile Application</h3>
-                                <div className="mt-8 flex flex-wrap gap-12">
-                                    {showcaseSkills.Application.map((skill, index) => (
-                                        <Tooltip content={skill.name} key={index}>
-                                            <div className="block-container w-20 h-20">
-                                                <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
-                                                <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
-                                                </div>
-                                            </div>
-                                        </Tooltip>
-                                    ))}
-                                </div>
-                            </div>
+                                    <div className="flex flex-col h-full items-start justify-start px-5">
+                                        <h3 className="sub-subhead-text dark:text-white">Mobile Application</h3>
+                                        <div className="mt-8 flex flex-wrap gap-12">
+                                            {showcaseSkills.Application.map((skill, index) => (
+                                                <Tooltip content={skill.name} key={index}>
+                                                    <div className="block-container w-20 h-20">
+                                                        <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                        <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                        </div>
+                                                    </div>
+                                                </Tooltip>
+                                            ))}
+                                        </div>
+                                    </div>
 
-                            <div className="flex flex-col h-full items-start justify-start px-5">
-                                <h3 className="sub-subhead-text dark:text-white">Artificial Intelligence</h3>
-                                <div className="mt-8 flex flex-wrap gap-12">
-                                    {showcaseSkills.AI.map((skill, index) => (
-                                        <Tooltip content={skill.name} key={index}>
-                                            <div className="block-container w-20 h-20">
-                                                <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
-                                                <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
-                                                </div>
-                                            </div>
-                                        </Tooltip>
-                                    ))}
-                                </div>
-                            </div>
+                                    <div className="flex flex-col h-full items-start justify-start px-5">
+                                        <h3 className="sub-subhead-text dark:text-white">Artificial Intelligence</h3>
+                                        <div className="mt-8 flex flex-wrap gap-12">
+                                            {showcaseSkills.AI.map((skill, index) => (
+                                                <Tooltip content={skill.name} key={index}>
+                                                    <div className="block-container w-20 h-20">
+                                                        <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                        <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                        </div>
+                                                    </div>
+                                                </Tooltip>
+                                            ))}
+                                        </div>
+                                    </div>
 
-                            <div className="flex flex-col h-full items-start justify-start px-5">
-                                <h3 className="sub-subhead-text dark:text-white">Operating Systems</h3>
-                                <div className="mt-8 flex flex-wrap gap-12">
-                                    {showcaseSkills.OS.map((skill, index) => (
-                                        <Tooltip content={skill.name} key={index}>
-                                            <div className="block-container w-20 h-20">
-                                                <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
-                                                <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                    <div className="flex flex-col h-full items-start justify-start px-5">
+                                        <h3 className="sub-subhead-text dark:text-white">Operating Systems</h3>
+                                        <div className="mt-8 flex flex-wrap gap-12">
+                                            {showcaseSkills.OS.map((skill, index) => (
+                                                <Tooltip content={skill.name} key={index}>
+                                                    <div className="block-container w-20 h-20">
+                                                        <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                        <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                        </div>
+                                                    </div>
+                                                </Tooltip>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </Carousel>
+                            </div>
+                            : <div className="py-[30px]">
+                                <div className="flex flex-col h-full items-start justify-start px-5 mb-[50px]">
+                                    <h3 className="sub-subhead-text dark:text-white">Frontend</h3>
+                                    <div className="mt-8 flex flex-wrap gap-12">
+                                        {showcaseSkills.Frontend.map((skill, index) => (
+                                            <Tooltip content={skill.name} key={index}>
+                                                <div className="block-container w-20 h-20">
+                                                    <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                    <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </Tooltip>
-                                    ))}
+                                            </Tooltip>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col h-full items-start justify-start px-5 mb-[50px]">
+                                    <h3 className="sub-subhead-text dark:text-white">Backend</h3>
+                                    <div className="mt-8 flex flex-wrap gap-12">
+                                        {showcaseSkills.Backend.map((skill, index) => (
+                                            <Tooltip content={skill.name} key={index}>
+                                                <div className="block-container w-20 h-20">
+                                                    <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                    <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                    </div>
+                                                </div>
+                                            </Tooltip>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col h-full items-start justify-start px-5 mb-[50px]">
+                                    <h3 className="sub-subhead-text dark:text-white">Database</h3>
+                                    <div className="mt-8 flex flex-wrap gap-12">
+                                        {showcaseSkills.Database.map((skill, index) => (
+                                            <Tooltip content={skill.name} key={index}>
+                                                <div className="block-container w-20 h-20">
+                                                    <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                    <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                    </div>
+                                                </div>
+                                            </Tooltip>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col h-full items-start justify-start px-5 mb-[50px]">
+                                    <h3 className="sub-subhead-text dark:text-white">Version Control</h3>
+                                    <div className="mt-8 flex flex-wrap gap-12">
+                                        {showcaseSkills['Version Control'].map((skill, index) => (
+                                            <Tooltip content={skill.name} key={index}>
+                                                <div className="block-container w-20 h-20">
+                                                    <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                    <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                    </div>
+                                                </div>
+                                            </Tooltip>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col h-full items-start justify-start px-5 mb-[50px]">
+                                    <h3 className="sub-subhead-text dark:text-white">Mobile Application</h3>
+                                    <div className="mt-8 flex flex-wrap gap-12">
+                                        {showcaseSkills.Application.map((skill, index) => (
+                                            <Tooltip content={skill.name} key={index}>
+                                                <div className="block-container w-20 h-20">
+                                                    <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                    <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                    </div>
+                                                </div>
+                                            </Tooltip>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col h-full items-start justify-start px-5 mb-[50px]">
+                                    <h3 className="sub-subhead-text dark:text-white">Artificial Intelligence</h3>
+                                    <div className="mt-8 flex flex-wrap gap-12">
+                                        {showcaseSkills.AI.map((skill, index) => (
+                                            <Tooltip content={skill.name} key={index}>
+                                                <div className="block-container w-20 h-20">
+                                                    <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                    <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                    </div>
+                                                </div>
+                                            </Tooltip>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col h-full items-start justify-start px-5">
+                                    <h3 className="sub-subhead-text dark:text-white">Operating Systems</h3>
+                                    <div className="mt-8 flex flex-wrap gap-12">
+                                        {showcaseSkills.OS.map((skill, index) => (
+                                            <Tooltip content={skill.name} key={index}>
+                                                <div className="block-container w-20 h-20">
+                                                    <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                    <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                    </div>
+                                                </div>
+                                            </Tooltip>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
-                        </Carousel>
-                    </div>
+                    }
                 </div>
 
                 <div className="py-16">
