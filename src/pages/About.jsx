@@ -112,7 +112,7 @@ const About = () => {
 
                 <div className="mt-5 flex felx-col gap-3 text-slate-500 dark:text-slate-200">
                     <p>
-                        A software engineer based in Malaysia with great passionate for coding, problem-solving and eager to learn new technologies.
+                        A software engineer based in Malaysia with great passion for coding, problem-solving and eager to learn new technologies.
                     </p>
                 </div>
                 <div className="mt-[10px] mb-[40px] download-btn" onClick={handleCVDownload} title="Click to download my CV">

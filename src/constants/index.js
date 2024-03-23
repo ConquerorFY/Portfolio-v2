@@ -1,8 +1,6 @@
 import { acodes, blue, freelance, hilti, magik, sunway } from "../assets/images";
 import {
-    car,
     css,
-    estate,
     express,
     git,
     github,
@@ -13,12 +11,8 @@ import {
     mui,
     nextjs,
     nodejs,
-    pricewise,
     react,
-    snapgram,
-    summiz,
     tailwindcss,
-    threads,
     typescript,
     angular,
     vue,
@@ -41,6 +35,13 @@ import {
     opencv,
     numpy,
     spring,
+    socialmedia,
+    game,
+    player,
+    extension,
+    consultation,
+    face,
+    bootstrap,
 } from "../assets/icons";
 
 export const skills = [
@@ -87,6 +88,11 @@ export const skills = [
     {
         imageUrl: mui,
         name: "Material-UI",
+        type: "Frontend",
+    },
+    {
+        imageUrl: bootstrap,
+        name: "Bootstrap",
         type: "Frontend",
     },
     {
@@ -276,7 +282,7 @@ export const experiences = [
     },
     {
         title: "Frontend Web Developer",
-        company_name: "Acodes Sdn Bhd",
+        company_name: "Acodes Technology Sdn Bhd",
         icon: acodes,
         iconBg: "#a2efa2",
         date: "Aug 2023 - Feb 2024",
@@ -303,12 +309,6 @@ export const experiences = [
     },
 ];
 
-// {
-//     name: 'Contact',
-//     iconUrl: contact,
-//     link: '/contact',
-// },
-
 export const socialLinks = [
     {
         name: 'GitHub',
@@ -324,45 +324,45 @@ export const socialLinks = [
 
 export const projects = [
     {
-        iconUrl: pricewise,
+        iconUrl: socialmedia,
         theme: 'btn-back-red',
         name: 'eTaman Application',
         description: 'A community-based social media application that is built using Flutter and Python Django frameworks.',
         link: 'https://github.com/ConquerorFY/APU-Final-Year-Project',
     },
     {
-        iconUrl: threads,
+        iconUrl: game,
         theme: 'btn-back-green',
         name: 'Secret Santa Christmas Game',
         description: 'A simple web browser game that is developed in HTML, CSS and React.js framework.',
         link: 'https://github.com/ConquerorFY/Secret-Santa-Christmas-Game',
     },
     {
-        iconUrl: car,
+        iconUrl: extension,
         theme: 'btn-back-blue',
         name: 'ClassInsight Pro',
         description: "A browser extension that utilizes Azure's OpenAI API to provide real-time summary and notes regarding lecture videos on Microsoft Stream.",
         link: 'https://github.com/Diskordlit/ClassInsight',
     },
     {
-        iconUrl: snapgram,
+        iconUrl: player,
         theme: 'btn-back-pink',
-        name: 'AHHASC Hostel Management System',
-        description: 'A hostel management system that is built using Java NetBeans.',
-        link: 'https://github.com/ConquerorFY/AHHASC',
+        name: 'Window ASCII Video Player',
+        description: 'A video streamer that streams your computer window and displays them in ASCII-esque format.',
+        link: 'https://github.com/ConquerorFY/Window-ASCII-Video-Player',
     },
     {
-        iconUrl: estate,
+        iconUrl: consultation,
         theme: 'btn-back-black',
-        name: 'HereForYou-Consultation',
-        description: 'A full-stack university consultation web system that is buit using HTML, CSS, JavaScript and PHP',
+        name: 'HereForYou Consultation',
+        description: 'A full-stack university consultation web system that is buit using HTML, CSS, JavaScript and PHP.',
         link: 'https://github.com/ConquerorFY/HereForYou-Consultation',
     },
     {
-        iconUrl: summiz,
+        iconUrl: face,
         theme: 'btn-back-yellow',
-        name: 'Lab Management System',
-        description: 'A lab management system that is built in Bash Shell Scripting language.',
-        link: 'https://github.com/ConquerorFY/Lab-Management-System',
+        name: 'Face Swapper',
+        description: 'A web application that harnesses the power of computer vision to detect faces in photos and allows users to swap faces between different images.',
+        link: 'https://github.com/ConquerorFY/Face-Swapper',
     }
 ];

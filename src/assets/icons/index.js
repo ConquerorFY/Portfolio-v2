@@ -47,7 +47,14 @@ import flask from './flask.svg';
 import numpy from './numpy.svg';
 import tensorflow from './tensorflow.svg';
 import opencv from './opencv.svg';
+import bootstrap from './bootstrap.svg';
 import spring from './spring.svg';
+import socialmedia from './socialmedia.svg';
+import game from './game.svg';
+import extension from './extension.svg';
+import player from './player.svg';
+import consultation from './consultation.svg';
+import face from './face.svg';
 
 import soundon from './soundon.png';
 import soundoff from './soundoff.png';
@@ -102,7 +109,14 @@ export {
     numpy,
     tensorflow,
     opencv,
+    bootstrap,
     spring,
+    socialmedia,
+    game,
+    extension,
+    player,
+    consultation,
+    face,
 
     soundon,
     soundoff
