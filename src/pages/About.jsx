@@ -30,6 +30,7 @@ const customControlTheme = {
 
 const About = () => {
     const [showcaseSkills, setShowcaseSkills] = useState({});
+    const [reload, setReload] = useState(false);
     const { isDarkMode } = useDarkModeContext();
     const { isMobile } = useMobileContext();
 
@@ -92,7 +93,7 @@ const About = () => {
         });
 
         loadTimelineDarkTheme();
-    }, [skills, isDarkMode])
+    }, [skills, isDarkMode, reload])
 
     const handleCVDownload = () => {
         const link = document.createElement('a');
@@ -104,6 +105,7 @@ const About = () => {
     }
 
     if (Object.keys(showcaseSkills).length > 0) {
+        if (!reload) setReload(true);
         return (
             <section className="max-container">
                 <h1 className="head-text dark:text-white">
@@ -135,7 +137,7 @@ const About = () => {
                                                     <div className="block-container w-20 h-20">
                                                         <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
                                                         <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                         </div>
                                                     </div>
                                                 </Tooltip>
@@ -151,7 +153,7 @@ const About = () => {
                                                     <div className="block-container w-20 h-20">
                                                         <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
                                                         <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                         </div>
                                                     </div>
                                                 </Tooltip>
@@ -167,7 +169,7 @@ const About = () => {
                                                     <div className="block-container w-20 h-20">
                                                         <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
                                                         <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                         </div>
                                                     </div>
                                                 </Tooltip>
@@ -183,7 +185,7 @@ const About = () => {
                                                     <div className="block-container w-20 h-20">
                                                         <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
                                                         <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                         </div>
                                                     </div>
                                                 </Tooltip>
@@ -199,7 +201,7 @@ const About = () => {
                                                     <div className="block-container w-20 h-20">
                                                         <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
                                                         <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                         </div>
                                                     </div>
                                                 </Tooltip>
@@ -215,7 +217,7 @@ const About = () => {
                                                     <div className="block-container w-20 h-20">
                                                         <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
                                                         <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                         </div>
                                                     </div>
                                                 </Tooltip>
@@ -231,7 +233,7 @@ const About = () => {
                                                     <div className="block-container w-20 h-20">
                                                         <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
                                                         <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                         </div>
                                                     </div>
                                                 </Tooltip>
@@ -249,7 +251,7 @@ const About = () => {
                                                 <div className="block-container w-20 h-20">
                                                     <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
                                                     <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                     </div>
                                                 </div>
                                             </Tooltip>
@@ -265,7 +267,7 @@ const About = () => {
                                                 <div className="block-container w-20 h-20">
                                                     <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
                                                     <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                     </div>
                                                 </div>
                                             </Tooltip>
@@ -281,7 +283,7 @@ const About = () => {
                                                 <div className="block-container w-20 h-20">
                                                     <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
                                                     <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                     </div>
                                                 </div>
                                             </Tooltip>
@@ -297,7 +299,7 @@ const About = () => {
                                                 <div className="block-container w-20 h-20">
                                                     <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
                                                     <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                     </div>
                                                 </div>
                                             </Tooltip>
@@ -313,7 +315,7 @@ const About = () => {
                                                 <div className="block-container w-20 h-20">
                                                     <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
                                                     <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                     </div>
                                                 </div>
                                             </Tooltip>
@@ -329,7 +331,7 @@ const About = () => {
                                                 <div className="block-container w-20 h-20">
                                                     <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
                                                     <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                     </div>
                                                 </div>
                                             </Tooltip>
@@ -345,7 +347,7 @@ const About = () => {
                                                 <div className="block-container w-20 h-20">
                                                     <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
                                                     <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
-                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" loading="lazy" />
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
                                                     </div>
                                                 </div>
                                             </Tooltip>
