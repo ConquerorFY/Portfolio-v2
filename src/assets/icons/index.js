@@ -55,6 +55,7 @@ import extension from './extension.svg';
 import player from './player.svg';
 import consultation from './consultation.svg';
 import face from './face.svg';
+import androidstudio from './androidstudio.svg';
 
 import soundon from './soundon.png';
 import soundoff from './soundoff.png';
@@ -117,6 +118,7 @@ export {
     player,
     consultation,
     face,
+    androidstudio,
 
     soundon,
     soundoff

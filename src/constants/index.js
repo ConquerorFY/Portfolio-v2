@@ -42,6 +42,7 @@ import {
     consultation,
     face,
     bootstrap,
+    androidstudio,
 } from "../assets/icons";
 
 export const skills = [
@@ -183,6 +184,11 @@ export const skills = [
     {
         imageUrl: react,
         name: "React Native",
+        type: "Application"
+    },
+    {
+        imageUrl: androidstudio,
+        name: "Android Studio",
         type: "Application"
     },
     {
