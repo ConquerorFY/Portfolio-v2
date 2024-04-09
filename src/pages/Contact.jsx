@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import emailjs from '@emailjs/browser';
 import { Canvas } from "@react-three/fiber";
-import Loader from "../components/Loader2";
+import Loader from "../components/Loader";
 import Fox from "../models/Fox";
 import useAlert from "../hooks/useAlert";
 import AlertBox from "../components/Alert";

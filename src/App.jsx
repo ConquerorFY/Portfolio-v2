@@ -1,13 +1,10 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import { Home, About, Projects, Contact } from './pages';
-import { useState } from "react";
 import DarkModeProvider from "./hooks/providers/DarkMode";
 import MobileProvider from "./hooks/providers/Mobile";
 
 const App = () => {
-    const [isLoaded, setIsLoaded] = useState(false);
-
     return (
         <DarkModeProvider>
             <MobileProvider>
@@ -15,7 +12,7 @@ const App = () => {
                     <Router>
                         <Navbar />
                         <Routes>
-                            <Route path="/" element={<Home isLoaded={isLoaded} setIsLoaded={setIsLoaded} />} />
+                            <Route path="/" element={<Home />} />
                             <Route path="/about" element={<About />} />
                             <Route path="/projects" element={<Projects />} />
                             <Route path="/contact" element={<Contact />} />

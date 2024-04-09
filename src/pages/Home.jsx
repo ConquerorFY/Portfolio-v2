@@ -1,9 +1,9 @@
 import { useState, Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
-import HandleLoader from "../components/HandleLoader";
+
 import Island from "../models/Island";
-import Sky from "../models/Sky2";
+import Sky from "../models/Sky";
 import Bird from "../models/Bird";
 import Plane from "../models/Plane";
 import HomeInfo from "../components/HomeInfo";
@@ -13,7 +13,7 @@ import { soundon, soundoff } from "../assets/icons";
 import NightSky from "../models/NightSky";
 import useDarkModeContext from "../hooks/useDarkMode";
 
-const Home = ({ isLoaded, setIsLoaded }) => {
+const Home = () => {
     const audioRef = useRef(new Audio(sakura));
     audioRef.current.volume = 0.4;
     audioRef.current.loop = true;
@@ -21,13 +21,6 @@ const Home = ({ isLoaded, setIsLoaded }) => {
     const [currentStage, setCurrentStage] = useState(1);
     const [isPlayingMusic, setIsPlayingMusic] = useState(false);
     const { isDarkMode } = useDarkModeContext();
-
-    useEffect(() => {
-        setIsLoaded(false);
-        setTimeout(() => {
-            setIsLoaded(true);
-        }, 5000)
-    }, []);
 
     useEffect(() => {
         if (isPlayingMusic) {
@@ -72,8 +65,7 @@ const Home = ({ isLoaded, setIsLoaded }) => {
 
     return (
         <section className="h-screen overflow-hidden">
-            {!isLoaded ? <Loader /> : ''}
-            <section className="w-full h-screen relative" style={{ visibility: isLoaded ? 'visible' : 'hidden' }}>
+            <section className="w-full h-screen relative">
                 <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
                     {currentStage && <HomeInfo currentStage={currentStage} />}
                 </div>
@@ -82,7 +74,7 @@ const Home = ({ isLoaded, setIsLoaded }) => {
                     className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
                     camera={{ near: 0.1, far: 1000 }}
                 >
-                    <Suspense fallback={<HandleLoader setIsLoaded={setIsLoaded} />}>
+                    <Suspense fallback={<Loader />}>
                         <directionalLight position={[1, 1, 1]} intensity={isDarkMode ? 1 : 2} />
                         <ambientLight intensity={isDarkMode ? 0 : 1} />
                         <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={0.5} />

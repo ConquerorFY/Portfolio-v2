@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import skyScene from '../assets/3d/sky.glb';
 
-const Sky = ({ isRotating }) => {
+const Sky = ({ isRotating, isVisible }) => {
     const sky = useGLTF(skyScene);
     const skyRef = useRef();
 
@@ -14,7 +14,7 @@ const Sky = ({ isRotating }) => {
     })
 
     return (
-        <mesh ref={skyRef}>
+        <mesh ref={skyRef} visible={isVisible}>
             <primitive object={sky.scene} />
         </mesh>
     )
