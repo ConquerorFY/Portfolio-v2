@@ -16,42 +16,11 @@ import islandScene from '../assets/3d/island.glb';
 const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
     const islandRef = useRef();
 
-    const { gl, viewport } = useThree();
+    const { gl } = useThree();
     const { nodes, materials } = useGLTF(islandScene);
 
-    const lastX = useRef(0);
     const rotationSpeed = useRef(0);
     const dampingFactor = 0.95;
-
-    const handlePointerDown = (e) => {
-        e.stopPropagation();
-        e.preventDefault();
-        setIsRotating(true);
-
-        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-
-        lastX.current = clientX;
-    }
-
-    const handlePointerUp = (e) => {
-        e.stopPropagation();
-        e.preventDefault();
-        setIsRotating(false);
-    }
-
-    const handlePointerMove = (e) => {
-        e.stopPropagation();
-        e.preventDefault();
-
-        if (isRotating) {
-            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-            const delta = (clientX - lastX.current) / viewport.width;
-
-            islandRef.current.rotation.y += delta * 0.01 * Math.PI;
-            lastX.current = clientX;
-            rotationSpeed.current = delta * 0.01 * Math.PI;
-        }
-    }
 
     const handleKeyDown = (e) => {
         if (e.key === 'ArrowLeft') {
@@ -110,7 +79,7 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
                 case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
                     setCurrentStage(3);
                     break;
-                case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
+                case normalizedRotation >= 2.4 && normalizedRotation <= 2.8:
                     setCurrentStage(2);
                     break;
                 case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
@@ -123,21 +92,14 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
     })
 
     useEffect(() => {
-        const canvas = gl.domElement;
-        canvas.addEventListener('pointerdown', handlePointerDown);
-        canvas.addEventListener('pointerup', handlePointerUp);
-        canvas.addEventListener('pointermove', handlePointerMove);
         document.addEventListener('keydown', handleKeyDown);
         document.addEventListener('keyup', handleKeyUp);
 
         return () => {
-            canvas.removeEventListener('pointerdown', handlePointerDown);
-            canvas.removeEventListener('pointerup', handlePointerUp);
-            canvas.removeEventListener('pointermove', handlePointerMove);
             document.removeEventListener('keydown', handleKeyDown);
             document.removeEventListener('keyup', handleKeyUp);
         }
-    }, [gl, handlePointerDown, handlePointerUp, handlePointerMove])
+    }, [gl])
 
     return (
         <a.group ref={islandRef} {...props}>

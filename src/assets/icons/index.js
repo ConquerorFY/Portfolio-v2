@@ -57,8 +57,8 @@ import consultation from './consultation.svg';
 import face from './face.svg';
 import androidstudio from './androidstudio.svg';
 
-import soundon from './soundon.png';
-import soundoff from './soundoff.png';
+import play from './play.svg';
+import pause from './pause.svg';
 
 export {
     css,
@@ -120,6 +120,6 @@ export {
     face,
     androidstudio,
 
-    soundon,
-    soundoff
+    play,
+    pause
 }

@@ -1,4 +1,4 @@
-import { useState, Suspense, useEffect, useRef } from "react";
+import { useState, Suspense, useRef, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
 
@@ -9,7 +9,7 @@ import Plane from "../models/Plane";
 import HomeInfo from "../components/HomeInfo";
 
 import sakura from '../assets/sakura.mp3';
-import { soundon, soundoff } from "../assets/icons";
+import { play, pause } from "../assets/icons";
 import NightSky from "../models/NightSky";
 import useDarkModeContext from "../hooks/useDarkMode";
 
@@ -19,18 +19,17 @@ const Home = () => {
     audioRef.current.loop = true;
     const [isRotating, setIsRotating] = useState(false);
     const [currentStage, setCurrentStage] = useState(1);
-    const [isPlayingMusic, setIsPlayingMusic] = useState(false);
     const { isDarkMode } = useDarkModeContext();
 
-    useEffect(() => {
-        if (isPlayingMusic) {
-            audioRef.current.play();
-        }
+    const getAutoRotateID = () => {
+        return localStorage.getItem("auto-rotate-id")
+            ? parseInt(localStorage.getItem("auto-rotate-id"))
+            : null;
+    }
 
-        return () => {
-            audioRef.current.pause();
-        }
-    }, [isPlayingMusic]);
+    const setAutoRotateID = (id) => {
+        localStorage.setItem("auto-rotate-id", id);
+    }
 
     const adjustIslandForScreenSize = () => {
         let screenScale = null;
@@ -59,6 +58,32 @@ const Home = () => {
 
         return [screenScale, screenPosition];
     }
+
+    const startAutoRotate = () => {
+        setAutoRotateID(setInterval(() => {
+            const event = new KeyboardEvent('keydown', {
+                key: 'ArrowRight',
+                keyCode: 39,
+                which: 39,
+                code: 'ArrowRight',
+                keyIdentifier: 'Right',
+                bubbles: true
+            });
+            document.dispatchEvent(event);
+        }, 50));
+    }
+
+    const stopAutoRotate = () => {
+        const autoRotateID = getAutoRotateID();
+        clearInterval(autoRotateID);
+        setIsRotating(false);
+        setAutoRotateID(0);
+    }
+
+    useEffect(() => {
+        stopAutoRotate();
+        startAutoRotate();
+    }, []);
 
     const [islandScale, islandPosition, islandRotation] = adjustIslandForScreenSize();
     const [planeScale, planePosition] = adjustPlaneForScreenSize();
@@ -100,10 +125,11 @@ const Home = () => {
 
                 <div className="absolute bottom-2 left-2">
                     <img
-                        src={!isPlayingMusic ? soundoff : soundon}
-                        alt="sound"
-                        className="w-10 h-10 cursor-pointer object-contain"
-                        onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+                        src={!getAutoRotateID() ? play : pause}
+                        alt="auto-play"
+                        title={!getAutoRotateID() ? "Start autoplay" : "Pause autoplay"}
+                        className="w-10 h-10 cursor-pointer object-contain bg-purple-500 border-purple-900 border-2 p-2 rounded-[50%]"
+                        onClick={() => !getAutoRotateID() ? startAutoRotate() : stopAutoRotate()}
                     />
                 </div>
             </section >
