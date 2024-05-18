@@ -12,6 +12,7 @@ import sakura from '../assets/sakura.mp3';
 import { play, pause } from "../assets/icons";
 import NightSky from "../models/NightSky";
 import useDarkModeContext from "../hooks/useDarkMode";
+import { getAutoRotateID, setAutoRotateID } from "../storage/rotation";
 
 const Home = () => {
     const audioRef = useRef(new Audio(sakura));
@@ -20,16 +21,6 @@ const Home = () => {
     const [isRotating, setIsRotating] = useState(false);
     const [currentStage, setCurrentStage] = useState(1);
     const { isDarkMode } = useDarkModeContext();
-
-    const getAutoRotateID = () => {
-        return localStorage.getItem("auto-rotate-id")
-            ? parseInt(localStorage.getItem("auto-rotate-id"))
-            : null;
-    }
-
-    const setAutoRotateID = (id) => {
-        localStorage.setItem("auto-rotate-id", id);
-    }
 
     const adjustIslandForScreenSize = () => {
         let screenScale = null;
@@ -70,7 +61,7 @@ const Home = () => {
                 bubbles: true
             });
             document.dispatchEvent(event);
-        }, 50));
+        }, 100));
     }
 
     const stopAutoRotate = () => {
