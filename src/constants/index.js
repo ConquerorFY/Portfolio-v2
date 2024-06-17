@@ -1,4 +1,4 @@
-import { acodes, blue, freelance, hilti, magik, sunway } from "../assets/images";
+import { acodes, blue, freelance, hilti, huawei, magik, sunway } from "../assets/images";
 import {
     css,
     express,
@@ -311,6 +311,17 @@ export const experiences = [
             "Worked on creating desktop applications using Java NetBeans",
             "Worked on creating systems using Bash",
             "Worked on creating Android applications using Android Studio and Flutter"
+        ],
+    },
+    {
+        title: "Network Engineer",
+        company_name: "Huawei",
+        icon: huawei,
+        iconBg: "#ffddaa",
+        date: "May 2024 - Now",
+        points: [
+            "Worked on configuring network devices such as switches and routers for enterprises",
+            "Worked on network solution design, planning and implementation processes"
         ],
     },
 ];

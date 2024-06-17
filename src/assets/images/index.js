@@ -11,6 +11,7 @@ import blue from './blue.png'
 import logo from './logo.svg'
 import loading from './loading.gif'
 import acodes from './acodes.png'
+import huawei from './huawei.png'
 
 export {
     hero,
@@ -25,5 +26,6 @@ export {
     blue,
     logo,
     loading,
-    acodes
+    acodes,
+    huawei
 }
