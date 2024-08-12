@@ -1,4 +1,4 @@
-import { acodes, blue, freelance, hilti, huawei, magik, sunway } from "../assets/images";
+import { acodes, blue, freelance, hilti, huawei, magik, sunway, unilah } from "../assets/images";
 import {
     css,
     express,
@@ -293,10 +293,24 @@ export const experiences = [
         iconBg: "#a2efa2",
         date: "Aug 2023 - Feb 2024",
         points: [
-            "Worked on designing new web pages using React Next.js framework and Tailwind CSS",
+            "Worked on creating web pages using React Next.js framework and Tailwind CSS",
             "Worked on integrating APIs using React Query",
             "Worked on handling data state management using Redux",
             "Helped in designing solution architecture for web systems"
+        ],
+    },
+    {
+        title: "Software Engineer",
+        company_name: "UniLah The Student App",
+        icon: unilah,
+        iconBg: "#088899",
+        date: "Nov 2023 - Jun 2024",
+        points: [
+            "Worked on creating web pages using React, Typescript and Tailwind CSS",
+            "Worked on handling backend CRUD and other operations using Nest.js and Typescript",
+            "Worked on improving certain app functionalities using React Native",
+            "Worked on integration of backend APIs onto the frontend website",
+            "Helped conducted various UAT tests towards the frontend websites (for both UI and functionalities)"
         ],
     },
     {

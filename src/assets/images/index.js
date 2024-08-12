@@ -12,6 +12,7 @@ import logo from './logo.svg'
 import loading from './loading.gif'
 import acodes from './acodes.png'
 import huawei from './huawei.png'
+import unilah from './unilah.png'
 
 export {
     hero,
@@ -27,5 +28,6 @@ export {
     logo,
     loading,
     acodes,
-    huawei
+    huawei,
+    unilah
 }
