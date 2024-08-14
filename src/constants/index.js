@@ -327,17 +327,17 @@ export const experiences = [
             "Worked on creating Android applications using Android Studio and Flutter"
         ],
     },
-    {
-        title: "Network Engineer",
-        company_name: "Huawei",
-        icon: huawei,
-        iconBg: "#ffddaa",
-        date: "May 2024 - Now",
-        points: [
-            "Worked on configuring network devices such as switches and routers for enterprises",
-            "Worked on network solution design, planning and implementation processes"
-        ],
-    },
+    // {
+    //     title: "Network Engineer",
+    //     company_name: "Huawei",
+    //     icon: huawei,
+    //     iconBg: "#ffddaa",
+    //     date: "May 2024 - Now",
+    //     points: [
+    //         "Worked on configuring network devices such as switches and routers for enterprises",
+    //         "Worked on network solution design, planning and implementation processes"
+    //     ],
+    // },
 ];
 
 export const socialLinks = [
