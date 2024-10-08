@@ -16,8 +16,7 @@ const Projects = () => {
 
             <div className="mt-5 flex flex-col gap-3 text-slate-500 dark:text-slate-200">
                 <p>
-                    I have undertaken various projects throughout the years of studying and working as a software engineer.
-                    Most of them are open-source and available at my GitHub repository. Here are some of my projects:
+                    Throughout the years, I have participated in various projects within both software and network engineering fields which I have learnt a lot from. Here are some of my projects:
                 </p>
             </div>
 

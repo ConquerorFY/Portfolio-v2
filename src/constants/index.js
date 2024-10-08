@@ -327,17 +327,20 @@ export const experiences = [
             "Worked on creating Android applications using Android Studio and Flutter"
         ],
     },
-    // {
-    //     title: "Network Engineer",
-    //     company_name: "Huawei",
-    //     icon: huawei,
-    //     iconBg: "#ffddaa",
-    //     date: "May 2024 - Now",
-    //     points: [
-    //         "Worked on configuring network devices such as switches and routers for enterprises",
-    //         "Worked on network solution design, planning and implementation processes"
-    //     ],
-    // },
+    {
+        title: "Network Engineer",
+        company_name: "Huawei",
+        icon: huawei,
+        iconBg: "#ffddaa",
+        date: "May 2024 - Now",
+        points: [
+            "Worked on designing and implementing network solutions for enterprises",
+            "Worked on managing firewalls to control network traffic for enterprises",
+            "Worked on upgrading firmware, patching and activating licenses for network devices",
+            "Worked on utilizing Huawei's iMaster NCE Campus in managing existing network devices",
+            "Worked on network migration activities (from Cisco to Huawei) for enterprises"
+        ],
+    },
 ];
 
 export const socialLinks = [
@@ -357,43 +360,43 @@ export const projects = [
     {
         iconUrl: socialmedia,
         theme: 'btn-back-red',
-        name: 'eTaman Application',
-        description: 'A community-based social media application that is built using Flutter and Python Django frameworks.',
-        link: 'https://github.com/ConquerorFY/APU-Final-Year-Project',
+        name: 'Moosan Durian Club',
+        description: 'In this project, I\'m responsible for developing the frontend UIs using HTML, CSS and NextJS. I\'m also responsible for integrating APIs from the backend using React Query.',
+        link: 'https://www.moosan.club/en',
     },
     {
         iconUrl: game,
         theme: 'btn-back-green',
-        name: 'Secret Santa Christmas Game',
-        description: 'A simple web browser game that is developed in HTML, CSS and React.js framework.',
-        link: 'https://github.com/ConquerorFY/Secret-Santa-Christmas-Game',
+        name: 'Unilah Overseas Campus (UOC)',
+        description: 'In this project, I\'m responsible for developing the frontend UIs using HTML, CSS and React. I\'m also responsible for integrating APIs from the backend.',
+        link: 'https://uoc.myunilah.com/',
     },
     {
         iconUrl: extension,
         theme: 'btn-back-blue',
         name: 'ClassInsight Pro',
-        description: "A browser extension that utilizes Azure's OpenAI API to provide real-time summary and notes regarding lecture videos on Microsoft Stream.",
+        description: "In this project, I'm responsible in handling how different lecture video data are processed through the OpenAI API to be used as the context basis for the extension chatbot.",
         link: 'https://github.com/Diskordlit/ClassInsight',
     },
     {
         iconUrl: player,
         theme: 'btn-back-pink',
-        name: 'Window ASCII Video Player',
-        description: 'A video streamer that streams your computer window and displays them in ASCII-esque format.',
-        link: 'https://github.com/ConquerorFY/Window-ASCII-Video-Player',
+        name: 'ConX Agency',
+        description: 'In this project, I\'m responsible for setting up and handling the backend for the entire ConX Agency web management system (using NestJS and Supabase) ',
+        link: 'https://github.com/ConX-Agency',
     },
-    {
-        iconUrl: consultation,
-        theme: 'btn-back-black',
-        name: 'HereForYou Consultation',
-        description: 'A full-stack university consultation web system that is buit using HTML, CSS, JavaScript and PHP.',
-        link: 'https://github.com/ConquerorFY/HereForYou-Consultation',
-    },
-    {
-        iconUrl: face,
-        theme: 'btn-back-yellow',
-        name: 'Face Swapper',
-        description: 'A web application that harnesses the power of computer vision to detect faces in photos and allows users to swap faces between different images.',
-        link: 'https://github.com/ConquerorFY/Face-Swapper',
-    }
+    // {
+    //     iconUrl: consultation,
+    //     theme: 'btn-back-black',
+    //     name: 'HereForYou Consultation',
+    //     description: 'A full-stack university consultation web system that is buit using HTML, CSS, JavaScript and PHP.',
+    //     link: 'https://github.com/ConquerorFY/HereForYou-Consultation',
+    // },
+    // {
+    //     iconUrl: face,
+    //     theme: 'btn-back-yellow',
+    //     name: 'Face Swapper',
+    //     description: 'A web application that harnesses the power of computer vision to detect faces in photos and allows users to swap faces between different images.',
+    //     link: 'https://github.com/ConquerorFY/Face-Swapper',
+    // }
 ];
