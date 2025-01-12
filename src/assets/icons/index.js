@@ -56,6 +56,10 @@ import player from './player.svg';
 import consultation from './consultation.svg';
 import face from './face.svg';
 import androidstudio from './androidstudio.svg';
+import laravel from './laravel.svg';
+import postgresql from './postgresql.svg';
+import supabase from './supabase.svg';
+import euleros from './euleros.png';
 
 import play from './play.svg';
 import pause from './pause.svg';
@@ -119,6 +123,10 @@ export {
     consultation,
     face,
     androidstudio,
+    laravel,
+    postgresql,
+    supabase,
+    euleros,
 
     play,
     pause

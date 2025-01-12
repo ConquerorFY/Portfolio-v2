@@ -39,10 +39,12 @@ import {
     game,
     player,
     extension,
-    consultation,
-    face,
     bootstrap,
     androidstudio,
+    euleros,
+    postgresql,
+    supabase,
+    laravel,
 } from "../assets/icons";
 
 export const skills = [
@@ -162,6 +164,11 @@ export const skills = [
         type: "Backend"
     },
     {
+        imageUrl: laravel,
+        name: "Laravel",
+        type: "Backend"
+    },
+    {
         imageUrl: java,
         name: "Java",
         type: ["Backend", "Application"]
@@ -197,6 +204,16 @@ export const skills = [
         type: "Database",
     },
     {
+        imageUrl: postgresql,
+        name: "PostgreSQL",
+        type: "Database",
+    },
+    {
+        imageUrl: supabase,
+        name: "Supabase",
+        type: ["Backend", "Database"],
+    },
+    {
         imageUrl: tensorflow,
         name: "Tensorflow",
         type: "AI",
@@ -230,6 +247,16 @@ export const skills = [
         imageUrl: windows,
         name: "Microsoft Windows",
         type: "OS",
+    },
+    {
+        imageUrl: euleros,
+        name: "Euler OS",
+        type: "OS",
+    },
+    {
+        imageUrl: huawei,
+        name: "Huawei S-Series Switches, iMaster NCE Campus, iMaster NCE Campus Insight",
+        type: "Network",
     },
 ];
 

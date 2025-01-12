@@ -127,10 +127,10 @@ const About = () => {
 
                     {
                         !isMobile
-                            ? <div className="md:h-[300px] h-[600px] mt-16">
+                            ? <div className="md:h-[330px] h-[600px] mt-16">
                                 <Carousel theme={customControlTheme} slideInterval={5000}>
                                     <div className="flex flex-col h-full items-start justify-start px-5">
-                                        <h3 className="sub-subhead-text dark:text-white">Frontend</h3>
+                                        <h3 className="sub-subhead-text dark:text-white">Frontend Development</h3>
                                         <div className="mt-8 flex flex-wrap gap-12">
                                             {showcaseSkills.Frontend.map((skill, index) => (
                                                 <Tooltip content={skill.name} key={index}>
@@ -146,7 +146,7 @@ const About = () => {
                                     </div>
 
                                     <div className="flex flex-col h-full items-start justify-start px-5">
-                                        <h3 className="sub-subhead-text dark:text-white">Backend</h3>
+                                        <h3 className="sub-subhead-text dark:text-white">Backend Development</h3>
                                         <div className="mt-8 flex flex-wrap gap-12">
                                             {showcaseSkills.Backend.map((skill, index) => (
                                                 <Tooltip content={skill.name} key={index}>
@@ -194,7 +194,7 @@ const About = () => {
                                     </div>
 
                                     <div className="flex flex-col h-full items-start justify-start px-5">
-                                        <h3 className="sub-subhead-text dark:text-white">Mobile Application</h3>
+                                        <h3 className="sub-subhead-text dark:text-white">Application Development</h3>
                                         <div className="mt-8 flex flex-wrap gap-12">
                                             {showcaseSkills.Application.map((skill, index) => (
                                                 <Tooltip content={skill.name} key={index}>
@@ -229,6 +229,22 @@ const About = () => {
                                         <h3 className="sub-subhead-text dark:text-white">Operating Systems</h3>
                                         <div className="mt-8 flex flex-wrap gap-12">
                                             {showcaseSkills.OS.map((skill, index) => (
+                                                <Tooltip content={skill.name} key={index}>
+                                                    <div className="block-container w-20 h-20">
+                                                        <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                        <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                            <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                                        </div>
+                                                    </div>
+                                                </Tooltip>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="flex flex-col h-full items-start justify-start px-5">
+                                        <h3 className="sub-subhead-text dark:text-white">Networking</h3>
+                                        <div className="mt-8 flex flex-wrap gap-12">
+                                            {showcaseSkills.Network.map((skill, index) => (
                                                 <Tooltip content={skill.name} key={index}>
                                                     <div className="block-container w-20 h-20">
                                                         <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
@@ -343,6 +359,22 @@ const About = () => {
                                     <h3 className="sub-subhead-text dark:text-white">Operating Systems</h3>
                                     <div className="mt-8 flex flex-wrap gap-12">
                                         {showcaseSkills.OS.map((skill, index) => (
+                                            <Tooltip content={skill.name} key={index}>
+                                                <div className="block-container w-20 h-20">
+                                                    <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
+                                                    <div className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}>
+                                                        <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
+                                                    </div>
+                                                </div>
+                                            </Tooltip>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col h-full items-start justify-start px-5">
+                                    <h3 className="sub-subhead-text dark:text-white">Networking</h3>
+                                    <div className="mt-8 flex flex-wrap gap-12">
+                                        {showcaseSkills.Network.map((skill, index) => (
                                             <Tooltip content={skill.name} key={index}>
                                                 <div className="block-container w-20 h-20">
                                                     <div className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`} />
