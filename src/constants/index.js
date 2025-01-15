@@ -379,7 +379,7 @@ export const socialLinks = [
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/ryan-lim-207412207/',
+        link: 'https://www.linkedin.com/in/ryan-lim-fang-yung-207412207/',
     }
 ];
 
@@ -389,7 +389,7 @@ export const projects = [
         theme: 'btn-back-red',
         name: 'Moosan Durian Club',
         description: 'In this project, I\'m responsible for developing the frontend UIs using HTML, CSS and NextJS. I\'m also responsible for integrating APIs from the backend using React Query.',
-        link: 'https://www.moosan.club/en',
+        link: 'https://moosan.club/',
     },
     {
         iconUrl: game,
