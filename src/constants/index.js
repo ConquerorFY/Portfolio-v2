@@ -255,7 +255,7 @@ export const skills = [
     },
     {
         imageUrl: huawei,
-        name: "Huawei S-Series Switches, iMaster NCE Campus, iMaster NCE Campus Insight",
+        name: "Huawei S-Series Switches, Huawei CE-Series Switches, iMaster NCE Campus, iMaster NCE Campus Insight",
         type: "Network",
     },
 ];
@@ -356,7 +356,7 @@ export const experiences = [
     },
     {
         title: "Network Engineer",
-        company_name: "Huawei",
+        company_name: "Huawei International Pte Ltd",
         icon: huawei,
         iconBg: "#ffddaa",
         date: "May 2024 - Now",
@@ -409,8 +409,8 @@ export const projects = [
         iconUrl: player,
         theme: 'btn-back-pink',
         name: 'ConX Agency',
-        description: 'In this project, I\'m responsible for setting up and handling the backend for the entire ConX Agency web management system (using NestJS and Supabase) ',
-        link: 'https://github.com/ConX-Agency',
+        description: 'As the tech lead of this project, I\'m responsible for managing the system\'s backend using NestJS and Supabase.',
+        link: 'https://conxagency.wixsite.com/conx-agency',
     },
     // {
     //     iconUrl: consultation,

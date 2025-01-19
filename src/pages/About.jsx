@@ -355,7 +355,7 @@ const About = () => {
                                     </div>
                                 </div>
 
-                                <div className="flex flex-col h-full items-start justify-start px-5">
+                                <div className="flex flex-col h-full items-start justify-start px-5 mb-[50px]">
                                     <h3 className="sub-subhead-text dark:text-white">Operating Systems</h3>
                                     <div className="mt-8 flex flex-wrap gap-12">
                                         {showcaseSkills.OS.map((skill, index) => (
