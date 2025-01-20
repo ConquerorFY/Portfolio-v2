@@ -10,7 +10,6 @@ import CTA from "../components/CTA";
 import { Tooltip } from "flowbite-react";
 import useDarkModeContext from "../hooks/useDarkMode";
 import { resume } from "../assets/icons";
-import { cv } from "../assets/files";
 import useMobileContext from "../hooks/useMobile";
 
 const customControlTheme = {
@@ -95,13 +94,8 @@ const About = () => {
         loadTimelineDarkTheme();
     }, [skills, isDarkMode, reload])
 
-    const handleCVDownload = () => {
-        const link = document.createElement('a');
-        link.href = cv;
-        link.download = 'ryan-cv.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+    const viewCV = () => {
+        window.open(`${location.origin}/files/ryan-cv.pdf`, "Ryan's CV");
     }
 
     if (Object.keys(showcaseSkills).length > 0) {
@@ -117,7 +111,7 @@ const About = () => {
                         A software & network engineer based in Malaysia with great passion for coding, problem-solving and eager to learn new technologies.
                     </p>
                 </div>
-                <div className="mt-[10px] mb-[40px] download-btn" onClick={handleCVDownload} title="Click to download my CV">
+                <div className="mt-[10px] mb-[40px] download-btn" onClick={viewCV} title="Click to view CV">
                     <img src={resume} alt="resume" className="w-[20px] mr-[10px]" />
                     <span>My CV</span>
                 </div>
@@ -240,7 +234,7 @@ const About = () => {
                                             ))}
                                         </div>
                                     </div>
-                                    
+
                                     <div className="flex flex-col h-full items-start justify-start px-5">
                                         <h3 className="sub-subhead-text dark:text-white">Networking</h3>
                                         <div className="mt-8 flex flex-wrap gap-12">
