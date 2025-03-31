@@ -255,7 +255,7 @@ export const skills = [
     },
     {
         imageUrl: huawei,
-        name: "Huawei S-Series Switches, Huawei CE-Series Switches, iMaster NCE Campus, iMaster NCE Campus Insight",
+        name: "Switches (Campus & Data Center), AP, AC, Servers",
         type: "Network",
     },
 ];
@@ -362,10 +362,10 @@ export const experiences = [
         date: "May 2024 - Now",
         points: [
             "Worked on designing and implementing network solutions for enterprises",
+            "Worked on network migration activities (from Cisco to Huawei) for enterprises",
             "Worked on managing firewalls to control network traffic for enterprises",
-            "Worked on upgrading firmware, patching and activating licenses for network devices",
-            "Worked on utilizing Huawei's iMaster NCE Campus in managing existing network devices",
-            "Worked on network migration activities (from Cisco to Huawei) for enterprises"
+            "Worked on onboarding and managing wireless access points (AP) using wireless access controllers (AC)",
+            "Worked on utilizing Huawei's iMaster NCE system (Campus & CampusInsight) in managing existing network devices",
         ],
     },
 ];
@@ -395,23 +395,30 @@ export const projects = [
         iconUrl: game,
         theme: 'btn-back-green',
         name: 'Unilah Overseas Campus (UOC)',
-        description: 'In this project, I\'m responsible for developing the frontend UIs using HTML, CSS and React. I\'m also responsible for integrating APIs from the backend.',
+        description: 'In this project, I\'m responsible for developing the frontend UIs using HTML, CSS and React. I\'m also responsible for integrating APIs from the NestJS backend.',
         link: 'https://uoc.myunilah.com/',
     },
     {
         iconUrl: extension,
         theme: 'btn-back-blue',
-        name: 'ClassInsight Pro',
-        description: "In this project, I'm responsible in handling how different lecture video data are processed through the OpenAI API to be used as the context basis for the extension chatbot.",
-        link: 'https://github.com/Diskordlit/ClassInsight',
+        name: 'OnLine Academy',
+        description: "In this project, I'm responsible for maintaining the website's UI by implementing different frontend features using HTML, CSS and JavaScript. I\'m also responsible for displaying data retrived from the .NET backend.",
+        link: 'https://on-lineacademy.com/main/index.asp',
     },
     {
         iconUrl: player,
         theme: 'btn-back-pink',
         name: 'ConX Agency',
-        description: 'As the tech lead of this project, I\'m responsible for managing the system\'s backend using NestJS and Supabase.',
+        description: 'As the tech lead of this project, I\'m responsible for managing the system\'s backend using NestJS and Supabase. I\'m also responsible for integrating the different endpoints within the frontend.',
         link: 'https://conxagency.wixsite.com/conx-agency',
     },
+    // {
+    //     iconUrl: player,
+    //     theme: 'btn-back-orange',
+    //     name: 'Hotel Sentral',
+    //     description: "In this project, I'm responsible for maintaining the website's UI by implementing different frontend features using HTML, CSS and JavaScript. I\'m also responsible for displaying data retrived from the .NET backend.",
+    //     link: '#',
+    // },
     // {
     //     iconUrl: consultation,
     //     theme: 'btn-back-black',

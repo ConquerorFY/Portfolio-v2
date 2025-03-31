@@ -34,6 +34,17 @@ const About = () => {
     const { isMobile } = useMobileContext();
 
     useEffect(() => {
+        const leftCarousel = document.querySelector('button[data-testid="carousel-left-control"]');
+        const rightCarousel = document.querySelector('button[data-testid="carousel-right-control"]');
+        if (leftCarousel && rightCarousel) {
+            const leftCarouselContainer = leftCarousel.parentElement;
+            const rightCarouselContainer = rightCarousel.parentElement;
+            leftCarouselContainer.style.pointerEvents = "none";
+            rightCarouselContainer.style.pointerEvents = "none";
+            leftCarousel.style.pointerEvents = "initial";
+            rightCarousel.style.pointerEvents = "initial";
+        }
+
         let skillsCategorization = {};
 
         function loadTimelineDarkTheme() {
@@ -103,25 +114,24 @@ const About = () => {
         return (
             <section className="max-container">
                 <h1 className="head-text dark:text-white">
-                    Hello, I'm <span className="blue-gradient_text font-semibold drop-shadow">Ryan Lim Fang Yung</span>
+                    Hi there, I'm <span className="blue-gradient_text font-semibold drop-shadow">Ryan Lim Fang Yung</span>
                 </h1>
 
                 <div className="mt-5 flex felx-col gap-3 text-slate-500 dark:text-slate-200">
                     <p>
-                        A software & network engineer based in Malaysia with great passion for coding, problem-solving and eager to learn new technologies.
+                        A dedicated software & network engineer that is driven by a passion for innovating, problem-solving, and continuous learning.
                     </p>
                 </div>
-                <div className="mt-[10px] mb-[40px] download-btn" onClick={viewCV} title="Click to view CV">
+                <div className="mt-[15px] mb-[40px] download-btn" onClick={viewCV} title="Click to view CV">
                     <img src={resume} alt="resume" className="w-[20px] mr-[10px]" />
                     <span>My CV</span>
                 </div>
 
                 <div className="py-10 pb-5 flex flex-col">
                     <h3 className="subhead-text dark:text-white">My Skills</h3>
-
                     {
                         !isMobile
-                            ? <div className="md:h-[330px] h-[600px] mt-16">
+                            ? <div className="md:h-[330px] h-[600px] mt-12">
                                 <Carousel theme={customControlTheme} slideInterval={5000}>
                                     <div className="flex flex-col h-full items-start justify-start px-5">
                                         <h3 className="sub-subhead-text dark:text-white">Frontend Development</h3>
@@ -394,7 +404,7 @@ const About = () => {
                     </div>
 
                     <div className="mt-12 flex dark:text-white">
-                        <VerticalTimeline>
+                        <VerticalTimeline animate={!isMobile}>
                             {experiences.map((experience) => (
                                 <VerticalTimelineElement
                                     key={experience.company_name}
