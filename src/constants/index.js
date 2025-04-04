@@ -412,13 +412,13 @@ export const projects = [
         description: 'As the tech lead of this project, I\'m responsible for managing the system\'s backend using NestJS and Supabase. I\'m also responsible for integrating the different endpoints within the frontend.',
         link: 'https://conxagency.wixsite.com/conx-agency',
     },
-    // {
-    //     iconUrl: player,
-    //     theme: 'btn-back-orange',
-    //     name: 'Hotel Sentral',
-    //     description: "In this project, I'm responsible for maintaining the website's UI by implementing different frontend features using HTML, CSS and JavaScript. I\'m also responsible for displaying data retrived from the .NET backend.",
-    //     link: '#',
-    // },
+    {
+        iconUrl: socialmedia,
+        theme: 'btn-back-orange',
+        name: 'Hotel Sentral',
+        description: "In this project, I'm responsible for fixing various issues and implementing new features on the entire web system using HTML, CSS, React and NestJS (frontend and backend).",
+        link: 'https://www.hotelsentral.com.my/',
+    },
     // {
     //     iconUrl: consultation,
     //     theme: 'btn-back-black',
