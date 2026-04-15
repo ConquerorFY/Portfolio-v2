@@ -410,7 +410,7 @@ export const projects = [
         theme: 'btn-back-pink',
         name: 'ConX Agency',
         description: 'As the tech lead of this project, I\'m responsible for managing the system\'s backend using NestJS and Supabase. I\'m also responsible for integrating the different endpoints within the frontend.',
-        link: 'https://conxagency.wixsite.com/conx-agency',
+        link: 'https://conx-group.webflow.io/',
     },
     {
         iconUrl: socialmedia,
