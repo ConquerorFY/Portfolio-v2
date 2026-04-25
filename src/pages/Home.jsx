@@ -1,18 +1,11 @@
 import { useState, Suspense, useRef, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
-import Loader from "../components/Loader";
-
-import Island from "../models/Island";
-import Sky from "../models/Sky";
-import Bird from "../models/Bird";
-import Plane from "../models/Plane";
-import HomeInfo from "../components/HomeInfo";
+import { Loader, Island, Sky, Bird, Plane, HomeInfo, NightSky } from "../components";
 
 import sakura from '../assets/sakura.mp3';
 import { play, pause } from "../assets/icons";
-import NightSky from "../models/NightSky";
 import useDarkModeContext from "../hooks/useDarkMode";
-import { getAutoRotateID, setAutoRotateID } from "../storage/rotation";
+import { getAutoRotateID, setAutoRotateID } from "../utils/rotation";
 
 const Home = () => {
     const audioRef = useRef(new Audio(sakura));

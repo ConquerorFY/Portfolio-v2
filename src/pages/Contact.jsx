@@ -1,10 +1,8 @@
 import React, { Suspense, useEffect, useState } from "react";
 import emailjs from '@emailjs/browser';
 import { Canvas } from "@react-three/fiber";
-import Loader from "../components/Loader";
-import Fox from "../models/Fox";
+import { Loader, Fox, Alert } from "../components";
 import useAlert from "../hooks/useAlert";
-import AlertBox from "../components/Alert";
 import useMobileContext from "../hooks/useMobile";
 
 const Contact = () => {
@@ -59,7 +57,7 @@ const Contact = () => {
 
     return (
         <section className="relative flex lg:flex-row flex-col max-container 2xl:h-[100vh]">
-            {alert.show && <AlertBox {...alert} />}
+            {alert.show && <Alert {...alert} />}
 
             <div className="flex-1 min-w-[50%] flex flex-col dark:text-white">
                 <h1 className="head-text">Get in Touch</h1>

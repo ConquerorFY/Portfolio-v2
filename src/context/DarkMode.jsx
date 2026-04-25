@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { DarkModeContext } from "../useDarkMode";
+import { DarkModeContext } from "../hooks/useDarkMode";
 
 const DarkModeProvider = ({ children }) => {
     const [isDarkMode, setIsDarkMode] = useState(false);

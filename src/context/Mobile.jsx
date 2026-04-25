@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { MobileContext } from "../useMobile";
+import { MobileContext } from "../hooks/useMobile";
 
 const MobileProvider = ({ children }) => {
     const [isMobile, setIsMobile] = useState(false);

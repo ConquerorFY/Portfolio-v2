@@ -2,7 +2,7 @@ import React from "react";
 import { projects, socialLinks } from "../constants";
 import { Link } from "react-router-dom";
 import { arrow } from "../assets/icons";
-import CTA from "../components/CTA";
+import { CTA } from "../components";
 import useDarkModeContext from "../hooks/useDarkMode";
 
 const Projects = () => {

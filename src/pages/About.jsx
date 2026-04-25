@@ -6,7 +6,7 @@ import "react-vertical-timeline-component/style.min.css";
 import React, { useEffect, useState } from "react";
 import { skills, experiences } from "../constants";
 import { Carousel } from 'flowbite-react';
-import CTA from "../components/CTA";
+import { CTA } from "../components";
 import { Tooltip } from "flowbite-react";
 import useDarkModeContext from "../hooks/useDarkMode";
 import { resume } from "../assets/icons";

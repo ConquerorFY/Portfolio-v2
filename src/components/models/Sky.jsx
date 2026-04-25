@@ -1,10 +1,10 @@
 import { useGLTF } from "@react-three/drei";
 import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import nightSkyScene from '../assets/3d/nightsky.glb';
+import skyScene from '../../assets/3d/sky.glb';
 
-const NightSky = ({ isRotating, isVisible }) => {
-    const sky = useGLTF(nightSkyScene);
+const Sky = ({ isRotating, isVisible }) => {
+    const sky = useGLTF(skyScene);
     const skyRef = useRef();
 
     useFrame((_, delta) => {
@@ -20,4 +20,4 @@ const NightSky = ({ isRotating, isVisible }) => {
     )
 }
 
-export default NightSky;
+export default Sky;
