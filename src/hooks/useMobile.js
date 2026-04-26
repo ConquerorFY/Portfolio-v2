@@ -2,8 +2,8 @@ import { useContext, createContext } from 'react';
 
 export const MobileContext = createContext();
 
-const useMobileContext = () => {
+const useMobile = () => {
   return useContext(MobileContext);
 };
 
-export default useMobileContext;
+export default useMobile;

@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom';
-import useDarkModeContext from '../../hooks/useDarkMode';
+import useDarkMode from '../../hooks/useDarkMode';
 import { light, dark } from '../../assets/icons';
 
 const Navbar = () => {
-  const { isDarkMode, toggleDarkMode } = useDarkModeContext();
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   const textColor = isDarkMode ? 'text-white' : 'text-black';
   return (

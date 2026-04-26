@@ -3,13 +3,13 @@ import emailjs from '@emailjs/browser';
 import { Canvas } from '@react-three/fiber';
 import { Loader, Fox, Alert } from '../components';
 import useAlert from '../hooks/useAlert';
-import useMobileContext from '../hooks/useMobile';
+import useMobile from '../hooks/useMobile';
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [isLoading, setIsLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState('idle');
-  const { isMobile } = useMobileContext();
+  const { isMobile } = useMobile();
 
   const { alert, showAlert, hideAlert } = useAlert();
 

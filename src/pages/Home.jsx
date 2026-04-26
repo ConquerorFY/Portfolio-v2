@@ -12,7 +12,7 @@ import {
 
 import sakura from '../assets/sakura.mp3';
 import { play, pause } from '../assets/icons';
-import useDarkModeContext from '../hooks/useDarkMode';
+import useDarkMode from '../hooks/useDarkMode';
 import { getAutoRotateID, setAutoRotateID } from '../utils/rotation';
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
   audioRef.current.loop = true;
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
-  const { isDarkMode } = useDarkModeContext();
+  const { isDarkMode } = useDarkMode();
 
   const adjustIslandForScreenSize = () => {
     let screenScale = null;

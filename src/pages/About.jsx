@@ -8,9 +8,9 @@ import { skills, experiences } from '../constants';
 import { Carousel } from 'flowbite-react';
 import { CTA } from '../components';
 import { Tooltip } from 'flowbite-react';
-import useDarkModeContext from '../hooks/useDarkMode';
+import useDarkMode from '../hooks/useDarkMode';
 import { resume } from '../assets/icons';
-import useMobileContext from '../hooks/useMobile';
+import useMobile from '../hooks/useMobile';
 
 const customControlTheme = {
   indicators: {
@@ -30,8 +30,8 @@ const customControlTheme = {
 const About = () => {
   const [showcaseSkills, setShowcaseSkills] = useState({});
   const [reload, setReload] = useState(false);
-  const { isDarkMode } = useDarkModeContext();
-  const { isMobile } = useMobileContext();
+  const { isDarkMode } = useDarkMode();
+  const { isMobile } = useMobile();
 
   useEffect(() => {
     const leftCarousel = document.querySelector(

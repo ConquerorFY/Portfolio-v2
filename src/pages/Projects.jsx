@@ -3,10 +3,10 @@ import { projects, socialLinks } from '../constants';
 import { Link } from 'react-router-dom';
 import { arrow } from '../assets/icons';
 import { CTA } from '../components';
-import useDarkModeContext from '../hooks/useDarkMode';
+import useDarkMode from '../hooks/useDarkMode';
 
 const Projects = () => {
-  const { isDarkMode } = useDarkModeContext();
+  const { isDarkMode } = useDarkMode();
 
   return (
     <section className='max-container'>
