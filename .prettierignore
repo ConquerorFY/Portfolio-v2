@@ -1,0 +1,12 @@
+node_modules
+dist
+build
+public
+*.pdf
+*.mp3
+*.glb
+*.svg
+*.png
+*.jpg
+*.gif
+*.ico
