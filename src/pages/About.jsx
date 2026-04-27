@@ -124,9 +124,59 @@ const About = () => {
               </div>
 
               <div className='flex flex-col h-full items-start justify-start px-5'>
+                <h3 className='sub-subhead-text dark:text-white'>
+                  Application Development
+                </h3>
+                <div className='mt-8 flex flex-wrap gap-12'>
+                  {showcaseSkills.Application.map((skill, index) => (
+                    <Tooltip content={skill.name} key={index}>
+                      <div className='block-container w-20 h-20'>
+                        <div
+                          className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`}
+                        />
+                        <div
+                          className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}
+                        >
+                          <img
+                            src={skill.imageUrl}
+                            alt={skill.name}
+                            className='w-1/2 h-1/2 object-contain'
+                          />
+                        </div>
+                      </div>
+                    </Tooltip>
+                  ))}
+                </div>
+              </div>
+
+              <div className='flex flex-col h-full items-start justify-start px-5'>
                 <h3 className='sub-subhead-text dark:text-white'>Database</h3>
                 <div className='mt-8 flex flex-wrap gap-12'>
                   {showcaseSkills.Database.map((skill, index) => (
+                    <Tooltip content={skill.name} key={index}>
+                      <div className='block-container w-20 h-20'>
+                        <div
+                          className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`}
+                        />
+                        <div
+                          className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}
+                        >
+                          <img
+                            src={skill.imageUrl}
+                            alt={skill.name}
+                            className='w-1/2 h-1/2 object-contain'
+                          />
+                        </div>
+                      </div>
+                    </Tooltip>
+                  ))}
+                </div>
+              </div>
+
+              <div className='flex flex-col h-full items-start justify-start px-5'>
+                <h3 className='sub-subhead-text dark:text-white'>Platforms</h3>
+                <div className='mt-8 flex flex-wrap gap-12'>
+                  {showcaseSkills.Platform.map((skill, index) => (
                     <Tooltip content={skill.name} key={index}>
                       <div className='block-container w-20 h-20'>
                         <div
@@ -175,10 +225,10 @@ const About = () => {
 
               <div className='flex flex-col h-full items-start justify-start px-5'>
                 <h3 className='sub-subhead-text dark:text-white'>
-                  Application Development
+                  Infrastructure
                 </h3>
                 <div className='mt-8 flex flex-wrap gap-12'>
-                  {showcaseSkills.Application.map((skill, index) => (
+                  {showcaseSkills.Infrastructure.map((skill, index) => (
                     <Tooltip content={skill.name} key={index}>
                       <div className='block-container w-20 h-20'>
                         <div
@@ -201,7 +251,33 @@ const About = () => {
 
               <div className='flex flex-col h-full items-start justify-start px-5'>
                 <h3 className='sub-subhead-text dark:text-white'>
-                  Artificial Intelligence
+                  Automation
+                </h3>
+                <div className='mt-8 flex flex-wrap gap-12'>
+                  {showcaseSkills.Automation.map((skill, index) => (
+                    <Tooltip content={skill.name} key={index}>
+                      <div className='block-container w-20 h-20'>
+                        <div
+                          className={`${isDarkMode ? 'btn-back-dark' : 'btn-back'} rounded-xl`}
+                        />
+                        <div
+                          className={`${isDarkMode ? 'btn-front-dark' : 'btn-front'} rounded-xl flex justify-center items-center`}
+                        >
+                          <img
+                            src={skill.imageUrl}
+                            alt={skill.name}
+                            className='w-1/2 h-1/2 object-contain'
+                          />
+                        </div>
+                      </div>
+                    </Tooltip>
+                  ))}
+                </div>
+              </div>
+
+              <div className='flex flex-col h-full items-start justify-start px-5'>
+                <h3 className='sub-subhead-text dark:text-white'>
+                  AI Tools
                 </h3>
                 <div className='mt-8 flex flex-wrap gap-12'>
                   {showcaseSkills.AI.map((skill, index) => (
@@ -253,7 +329,7 @@ const About = () => {
 
               <div className='flex flex-col h-full items-start justify-start px-5'>
                 <h3 className='sub-subhead-text dark:text-white'>
-                  Networking
+                  Datacommunications
                 </h3>
                 <div className='mt-8 flex flex-wrap gap-12'>
                   {showcaseSkills.Network.map((skill, index) => (

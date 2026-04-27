@@ -41,9 +41,13 @@ import dark from './dark.svg';
 import resume from './resume.svg';
 import nestjs from './nestjs.svg';
 import firebase from './firebase.svg';
+import digitalocean from './digital-ocean.svg';
+import vercel from './vercel.svg';
 import expo from './expo.svg';
 import django from './django.svg';
 import flask from './flask.svg';
+import sqlite from './sqlite.svg';
+import fastapi from './fastapi.svg';
 import numpy from './numpy.svg';
 import tensorflow from './tensorflow.svg';
 import opencv from './opencv.svg';
@@ -58,8 +62,18 @@ import face from './face.svg';
 import androidstudio from './androidstudio.svg';
 import laravel from './laravel.svg';
 import postgresql from './postgresql.svg';
+import redis from './redis.svg';
 import supabase from './supabase.svg';
 import euleros from './euleros.png';
+import docker from './docker.svg';
+import portainer from './portainer.svg';
+import nginx from './nginx.svg';
+import ansible from './ansible.svg';
+import terraform from './terraform.svg';
+import gemini from './gemini.svg';
+import chatgpt from './chatgpt.svg';
+import copilot from './copilot.svg';
+import ollama from './ollama.svg';
 
 import play from './play.svg';
 import pause from './pause.svg';
@@ -108,9 +122,13 @@ export {
   resume,
   nestjs,
   firebase,
+  digitalocean,
+  vercel,
   expo,
   django,
   flask,
+  fastapi,
+  sqlite,
   numpy,
   tensorflow,
   opencv,
@@ -125,8 +143,18 @@ export {
   androidstudio,
   laravel,
   postgresql,
+  redis,
   supabase,
   euleros,
+  docker,
+  portainer,
+  nginx,
+  ansible,
+  terraform,
+  gemini,
+  chatgpt,
+  copilot,
+  ollama,
   play,
   pause,
 };

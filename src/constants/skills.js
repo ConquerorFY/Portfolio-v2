@@ -14,7 +14,6 @@ import {
   typescript,
   angular,
   vue,
-  php,
   python,
   java,
   flutter,
@@ -27,70 +26,41 @@ import {
   nestjs,
   firebase,
   expo,
-  django,
   flask,
-  tensorflow,
-  opencv,
-  numpy,
-  spring,
   bootstrap,
   androidstudio,
   euleros,
   postgresql,
   supabase,
-  laravel,
+  fastapi,
+  sqlite,
+  digitalocean,
+  vercel,
+  redis,
+  docker,
+  gemini,
+  chatgpt,
+  copilot,
+  ollama,
+  portainer,
+  nginx,
+  ansible,
+  terraform,
 } from '../assets/icons';
 import { huawei } from '../assets/images';
 
 export const skills = [
+  // --- Networking ---
   {
-    imageUrl: css,
-    name: 'CSS',
-    type: 'Frontend',
+    imageUrl: huawei,
+    name: 'Switches (S & CE Series), AP, AC',
+    type: 'Network',
   },
+
+  // --- Frontend ---
   {
-    imageUrl: express,
-    name: 'Express',
-    type: 'Backend',
-  },
-  {
-    imageUrl: git,
-    name: 'Git',
-    type: 'Version Control',
-  },
-  {
-    imageUrl: github,
-    name: 'GitHub',
-    type: 'Version Control',
-  },
-  {
-    imageUrl: gitlab,
-    name: 'GitLab',
-    type: 'Version Control',
-  },
-  {
-    imageUrl: html,
-    name: 'HTML',
-    type: 'Frontend',
-  },
-  {
-    imageUrl: javascript,
-    name: 'JavaScript',
-    type: 'Frontend',
-  },
-  {
-    imageUrl: mongodb,
-    name: 'MongoDB',
-    type: 'Database',
-  },
-  {
-    imageUrl: mui,
-    name: 'Material-UI',
-    type: 'Frontend',
-  },
-  {
-    imageUrl: bootstrap,
-    name: 'Bootstrap',
+    imageUrl: react,
+    name: 'React',
     type: 'Frontend',
   },
   {
@@ -99,23 +69,13 @@ export const skills = [
     type: ['Frontend', 'Backend'],
   },
   {
-    imageUrl: nestjs,
-    name: 'Nest.js',
-    type: 'Backend',
+    imageUrl: typescript,
+    name: 'TypeScript',
+    type: 'Frontend',
   },
   {
-    imageUrl: firebase,
-    name: 'Firebase',
-    type: ['Backend', 'Database'],
-  },
-  {
-    imageUrl: nodejs,
-    name: 'Node.js',
-    type: 'Backend',
-  },
-  {
-    imageUrl: react,
-    name: 'React',
+    imageUrl: javascript,
+    name: 'JavaScript',
     type: 'Frontend',
   },
   {
@@ -124,8 +84,13 @@ export const skills = [
     type: 'Frontend',
   },
   {
-    imageUrl: typescript,
-    name: 'TypeScript',
+    imageUrl: html,
+    name: 'HTML',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: css,
+    name: 'CSS',
     type: 'Frontend',
   },
   {
@@ -139,18 +104,40 @@ export const skills = [
     type: 'Frontend',
   },
   {
-    imageUrl: php,
-    name: 'PHP',
+    imageUrl: mui,
+    name: 'Material-UI',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: bootstrap,
+    name: 'Bootstrap',
+    type: 'Frontend',
+  },
+
+  // --- Backend ---
+  {
+    imageUrl: nodejs,
+    name: 'Node.js',
+    type: 'Backend',
+  },
+  {
+    imageUrl: nestjs,
+    name: 'Nest.js',
     type: 'Backend',
   },
   {
     imageUrl: python,
     name: 'Python',
-    type: ['Backend', 'AI'],
+    type: ['Backend', 'Automation'],
   },
   {
-    imageUrl: django,
-    name: 'Django',
+    imageUrl: express,
+    name: 'Express',
+    type: 'Backend',
+  },
+  {
+    imageUrl: fastapi,
+    name: 'FastAPI',
     type: 'Backend',
   },
   {
@@ -158,20 +145,127 @@ export const skills = [
     name: 'Flask',
     type: 'Backend',
   },
+
+  // --- Database ---
   {
-    imageUrl: laravel,
-    name: 'Laravel',
-    type: 'Backend',
+    imageUrl: postgresql,
+    name: 'PostgreSQL',
+    type: 'Database',
   },
   {
-    imageUrl: java,
-    name: 'Java',
-    type: ['Backend', 'Application'],
+    imageUrl: mysql,
+    name: 'MySQL',
+    type: 'Database',
   },
   {
-    imageUrl: spring,
-    name: 'Spring',
-    type: 'Backend',
+    imageUrl: mongodb,
+    name: 'MongoDB',
+    type: 'Database',
+  },
+  {
+    imageUrl: redis,
+    name: 'Redis',
+    type: 'Database',
+  },
+  {
+    imageUrl: sqlite,
+    name: 'SQLite',
+    type: 'Database',
+  },
+
+  // --- Platforms & Services ---
+  {
+    imageUrl: vercel,
+    name: 'Vercel',
+    type: 'Platform',
+  },
+  {
+    imageUrl: digitalocean,
+    name: 'Digital Ocean',
+    type: 'Platform',
+  },
+  {
+    imageUrl: supabase,
+    name: 'Supabase',
+    type: 'Platform',
+  },
+  {
+    imageUrl: firebase,
+    name: 'Firebase',
+    type: 'Platform',
+  },
+  {
+    imageUrl: github,
+    name: 'GitHub',
+    type: 'Platform',
+  },
+  {
+    imageUrl: gitlab,
+    name: 'GitLab',
+    type: 'Platform',
+  },
+  {
+    imageUrl: docker,
+    name: 'Docker Hub',
+    type: 'Platform',
+  },
+
+  // --- Infrastructure ---
+  {
+    imageUrl: docker,
+    name: 'Docker',
+    type: 'Infrastructure',
+  },
+  {
+    imageUrl: nginx,
+    name: 'Nginx',
+    type: 'Infrastructure',
+  },
+  {
+    imageUrl: portainer,
+    name: 'Portainer',
+    type: 'Infrastructure',
+  },
+
+  // --- Automation ---
+  {
+    imageUrl: ansible,
+    name: 'Ansible',
+    type: 'Automation',
+  },
+  {
+    imageUrl: terraform,
+    name: 'Terraform',
+    type: 'Automation',
+  },
+
+  // --- Artificial Intelligence ---
+  {
+    imageUrl: gemini,
+    name: 'Gemini',
+    type: 'AI',
+  },
+  {
+    imageUrl: chatgpt,
+    name: 'ChatGPT',
+    type: 'AI',
+  },
+  {
+    imageUrl: copilot,
+    name: 'GitHub Copilot',
+    type: 'AI',
+  },
+  {
+    imageUrl: ollama,
+    name: 'Ollama',
+    type: 'AI',
+  },
+
+  // --- Application Development ---
+  {
+    imageUrl: react,
+    name: 'React Native',
+    type: 'Application',
   },
   {
     imageUrl: flutter,
@@ -184,53 +278,25 @@ export const skills = [
     type: 'Application',
   },
   {
-    imageUrl: react,
-    name: 'React Native',
-    type: 'Application',
-  },
-  {
     imageUrl: androidstudio,
     name: 'Android Studio',
     type: 'Application',
   },
   {
-    imageUrl: mysql,
-    name: 'MySQL',
-    type: 'Database',
+    imageUrl: java,
+    name: 'Java',
+    type: 'Application',
   },
+
+  // --- OS ---
   {
-    imageUrl: postgresql,
-    name: 'PostgreSQL',
-    type: 'Database',
-  },
-  {
-    imageUrl: supabase,
-    name: 'Supabase',
-    type: ['Backend', 'Database'],
-  },
-  {
-    imageUrl: tensorflow,
-    name: 'Tensorflow',
-    type: 'AI',
-  },
-  {
-    imageUrl: opencv,
-    name: 'OpenCV',
-    type: 'AI',
-  },
-  {
-    imageUrl: numpy,
-    name: 'Numpy',
-    type: 'AI',
+    imageUrl: ubuntu,
+    name: 'Ubuntu Linux',
+    type: 'OS',
   },
   {
     imageUrl: debian,
     name: 'Debian Linux',
-    type: 'OS',
-  },
-  {
-    imageUrl: ubuntu,
-    name: 'Ubuntu Linux',
     type: 'OS',
   },
   {
@@ -239,18 +305,20 @@ export const skills = [
     type: 'OS',
   },
   {
-    imageUrl: windows,
-    name: 'Microsoft Windows',
-    type: 'OS',
-  },
-  {
     imageUrl: euleros,
     name: 'Euler OS',
     type: 'OS',
   },
   {
-    imageUrl: huawei,
-    name: 'Switches (Campus & Data Center), AP, AC, Servers',
-    type: 'Network',
+    imageUrl: windows,
+    name: 'Microsoft Windows',
+    type: 'OS',
+  },
+
+  // --- Version Control ---
+  {
+    imageUrl: git,
+    name: 'Git',
+    type: 'Version Control',
   },
 ];
