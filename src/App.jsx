@@ -8,7 +8,7 @@ const App = () => {
   return (
     <DarkModeProvider>
       <MobileProvider>
-        <main className='bg-slate-300/20 min-h-[100vh] h-full dark:bg-slate-900'>
+        <main className='min-h-[100vh] h-full'>
           <Router>
             <Navbar />
             <Routes>

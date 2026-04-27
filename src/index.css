@@ -11,6 +11,20 @@
   --green-rgb: 125 161 35;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  background-color: rgb(203 213 225 / 0.2); /* bg-slate-300/20 */
+}
+
+html.dark {
+  background-color: #0f172a; /* bg-slate-900 */
+}
+
 body {
   font-family: 'Work Sans', sans-serif;
 }
@@ -245,4 +259,24 @@ body:has(.card[data-color='green']:hover) {
     1vmin 1vmin #d2e4ff,
     0.65vmin 1vmin #d2e4ff,
     1vmin 0.65vmin #d2e4ff;
+}
+
+/* Vertical Timeline Dark Mode */
+.dark .vertical-timeline-element-content {
+  background: rgb(8, 13, 23) !important;
+  color: #fff !important;
+}
+
+.dark .vertical-timeline-element-content h3,
+.dark .vertical-timeline-element-content p,
+.dark .vertical-timeline-element-content li {
+  color: #fff !important;
+}
+
+.dark .vertical-timeline-element-content-arrow {
+  border-right: 7px solid rgb(8, 13, 23) !important;
+}
+
+.dark .vertical-timeline::before {
+  background: #fff;
 }

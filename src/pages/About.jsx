@@ -29,49 +29,6 @@ const About = () => {
   const { isDarkMode } = useDarkMode();
   const { isMobile } = useMobile();
 
-  useEffect(() => {
-    // manual dark mode styling for vertical timelime component since it doesn't inherit from tailwind's dark mode classes
-    const verticalElements = document.querySelectorAll(
-      '.vertical-timeline-element-content'
-    );
-    const verticalElementsTitle = document.querySelectorAll(
-      '.vertical-timeline-element-content h3'
-    );
-    const verticalElementsCompany = document.querySelectorAll(
-      '.vertical-timeline-element-content p'
-    );
-    const verticalElementsPoints = document.querySelectorAll(
-      '.vertical-timeline-element-content li'
-    );
-    if (isDarkMode) {
-      verticalElements.forEach((el) => {
-        el.style.background = 'rgb(8,13,23)';
-      });
-      verticalElementsTitle.forEach((el) => {
-        el.style.color = 'white';
-      });
-      verticalElementsCompany.forEach((el) => {
-        el.style.color = 'white';
-      });
-      verticalElementsPoints.forEach((el) => {
-        el.style.color = 'white';
-      });
-    } else {
-      verticalElements.forEach((el) => {
-        el.style.background = '';
-      });
-      verticalElementsTitle.forEach((el) => {
-        el.style.color = '';
-      });
-      verticalElementsCompany.forEach((el) => {
-        el.style.color = '';
-      });
-      verticalElementsPoints.forEach((el) => {
-        el.style.color = '';
-      });
-    }
-  }, [isDarkMode])
-
   return (
     <section className='max-container'>
       <h1 className='head-text dark:text-white'>
