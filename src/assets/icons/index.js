@@ -78,6 +78,8 @@ import hr from './hr.svg';
 
 import play from './play.svg';
 import pause from './pause.svg';
+import arrowUp from './arrow-up.svg';
+import arrowDown from './arrow-down.svg';
 
 export {
   css,
@@ -159,4 +161,6 @@ export {
   hr,
   play,
   pause,
+  arrowUp,
+  arrowDown,
 };

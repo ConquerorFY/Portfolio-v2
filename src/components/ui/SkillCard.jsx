@@ -1,15 +1,30 @@
+import { useRef, useEffect, useState } from 'react';
+import { Tooltip } from 'flowbite-react';
+import { arrowDown, arrowUp } from "@/assets/icons";
 import useMobile from "../../hooks/useMobile";
 import useDarkMode from "../../hooks/useDarkMode";
-import { Tooltip } from 'flowbite-react';
 
 const SkillCard = ({ skillTitle, skillList }) => {
   const { isMobile } = useMobile();
   const { isDarkMode } = useDarkMode();
+  const skillRef = useRef();
+  const [isCollapse, setIsCollapse] = useState(false);
+
+  useEffect(() => {
+    if (isCollapse)
+      skillRef.current.style.display = 'none';
+    else
+      skillRef.current.style.display = '';
+  }, [isCollapse]);
 
   if (isMobile) {
     return <div className='flex flex-col h-full items-start justify-start px-5 mb-[50px]'>
-      <h3 className='sub-subhead-text dark:text-white'>{skillTitle}</h3>
-      <div className='mt-8 flex flex-wrap gap-12'>
+      <div className="flex justify-between item-center cursor-pointer" onClick={() => setIsCollapse(!isCollapse)}>
+        <h3 className='sub-subhead-text dark:text-white'>{skillTitle}</h3>
+        {!isCollapse && <img src={arrowDown} alt='arrow-down' className="w-4 ml-2" />}
+        {isCollapse && <img src={arrowUp} alt='arrow-up' className="w-4 ml-2" />}
+      </div>
+      <div ref={skillRef} className='mt-8 flex flex-wrap gap-12'>
         {skillList.map((skill, index) => (
           <Tooltip content={skill.name} key={index}>
             <div className='block-container w-20 h-20'>
