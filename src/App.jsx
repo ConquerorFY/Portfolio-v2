@@ -1,8 +1,8 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import { Navbar } from './components';
-import { Home, About, Projects, Contact } from './pages';
-import DarkModeProvider from './context/DarkMode';
-import MobileProvider from './context/Mobile';
+import { Navbar } from '@/components';
+import { Home, About, Projects, Contact } from '@/pages';
+import DarkModeProvider from '@/context/DarkMode';
+import MobileProvider from '@/context/Mobile';
 
 const App = () => {
   return (

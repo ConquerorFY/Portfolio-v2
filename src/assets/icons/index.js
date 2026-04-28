@@ -74,6 +74,7 @@ import gemini from './gemini.svg';
 import chatgpt from './chatgpt.svg';
 import copilot from './copilot.svg';
 import ollama from './ollama.svg';
+import hr from './hr.svg';
 
 import play from './play.svg';
 import pause from './pause.svg';
@@ -155,6 +156,7 @@ export {
   chatgpt,
   copilot,
   ollama,
+  hr,
   play,
   pause,
 };

@@ -3,50 +3,83 @@ import {
   game,
   extension,
   player,
+  hr,
   // consultation,
   // face,
-} from '../assets/icons';
+} from '@/assets/icons';
 
 export const projects = [
   {
     iconUrl: socialmedia,
     theme: 'btn-back-red',
+    company: {
+      name: 'Acodes Technology Sdn Bhd',
+      link: 'https://acodes.com.my/home/',
+    },
     name: 'Moosan Durian Club',
     description:
-      "In this project, I'm responsible for developing the frontend UIs using HTML, CSS and NextJS. I'm also responsible for integrating APIs from the backend using React Query.",
+      'Developed high-performance frontend interfaces using Next.js, HTML, and CSS. Orchestrated efficient backend data synchronization through robust API integration with React Query.',
     link: 'https://moosan.club/',
   },
   {
     iconUrl: game,
     theme: 'btn-back-green',
     name: 'Unilah Overseas Campus (UOC)',
+    company: {
+      name: 'UniLah Sdn Bhd',
+      link: 'https://myunilah.com/',
+    },
     description:
-      "In this project, I'm responsible for developing the frontend UIs using HTML, CSS and React. I'm also responsible for integrating APIs from the NestJS backend.",
+      'Engineered intuitive user interfaces utilizing React, HTML, and CSS. Facilitated seamless client-server communication via comprehensive API integration with a NestJS backend.',
     link: 'https://uoc.myunilah.com/',
   },
   {
     iconUrl: extension,
     theme: 'btn-back-blue',
     name: 'OnLine Academy',
+    company: {
+      name: 'Line Pilates Asia',
+      link: 'https://linepilates.asia/',
+    },
     description:
-      "In this project, I'm responsible for maintaining the website's UI by implementing different frontend features using HTML, CSS and JavaScript. I\'m also responsible for displaying data retrived from the .NET backend.",
+      'Enhanced platform user experience by implementing sophisticated frontend features and maintaining UI integrity. Optimized data visualization for information retrieved from a .NET backend.',
     link: 'https://on-lineacademy.com/main/index.asp',
   },
   {
     iconUrl: player,
     theme: 'btn-back-pink',
-    name: 'ConX Agency',
+    name: 'ConX Agency Management System',
+    company: {
+      name: 'ConX Agency',
+      link: 'https://conx-group.webflow.io/',
+    },
     description:
-      "As the tech lead of this project, I'm responsible for managing the system's backend using NestJS and Supabase. I'm also responsible for integrating the different endpoints within the frontend.",
+      'Served as Technical Lead, architecting and managing a scalable backend infrastructure using NestJS and Supabase. Spearheaded end-to-end integration of complex API endpoints with the frontend application.',
     link: 'https://conx-group.webflow.io/',
   },
   {
     iconUrl: socialmedia,
     theme: 'btn-back-orange',
-    name: 'Hotel Sentral',
+    name: 'Hotel Sentral Property Management System (PMS)',
+    company: {
+      name: 'Studio20',
+      link: 'https://studio20.my/',
+    },
     description:
-      "In this project, I'm responsible for fixing various issues and implementing new features on the entire web system using HTML, CSS, React and NestJS (frontend and backend).",
+      'Contributed to the full-stack development of an enterprise Property Management System. Utilized React and NestJS to engineer new features and resolve critical technical issues across the platform.',
     link: 'https://www.hotelsentral.com.my/',
+  },
+  {
+    iconUrl: hr,
+    theme: 'btn-back-yellow',
+    name: 'AsiaPacTalents Admin Dashboard',
+    company: {
+      name: 'AsiaPacTalents',
+      link: 'https://www.asiapactalents.com/',
+    },
+    description:
+      'Designed and deployed automated WhatsApp chatbot solutions, leveraging third-party APIs such as Click4Wasap and PlanifyX. Oversaw system maintenance and performance optimization through rigorous bug resolution.',
+    link: 'https://admin.mynew.jobs',
   },
   // {
   //     iconUrl: consultation,

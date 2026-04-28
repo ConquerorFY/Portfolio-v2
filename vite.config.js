@@ -13,6 +13,11 @@ export default defineConfig({
       targets: ['defaults', 'not IE 11'],
     }),
   ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   assetsInclude: ['**/*.glb'],
   build: {
     rollupOptions: {
