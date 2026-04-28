@@ -46,13 +46,23 @@ const About = () => {
           for innovating, problem-solving, and continuous learning.
         </p>
       </div>
-      <div
-        className='mt-[15px] mb-[40px] download-btn'
-        onClick={() => window.open(`${location.origin}/files/ryan-cv.pdf`, "Ryan's CV")}
-        title='Click to view CV'
-      >
-        <img src={resume} alt='resume' className='w-[20px] mr-[10px]' />
-        <span>My CV</span>
+      <div className='flex'>
+        <div
+          className='mt-[15px] mb-[40px] download-btn'
+          onClick={() => window.open(`${location.origin}/files/ryan-cv-software.pdf`, "Ryan's Software CV")}
+          title='Click to view CV'
+        >
+          <img src={resume} alt='resume' className='w-[20px] mr-[10px]' />
+          <span>My CV (Software)</span>
+        </div>
+        <div
+          className='mt-[15px] ml-[15px] mb-[40px] download-btn'
+          onClick={() => window.open(`${location.origin}/files/ryan-cv-network.pdf`, "Ryan's Network CV")}
+          title='Click to view CV'
+        >
+          <img src={resume} alt='resume' className='w-[20px] mr-[10px]' />
+          <span>My CV (Network)</span>
+        </div>
       </div>
 
       <div className='py-10 pb-5 flex flex-col'>

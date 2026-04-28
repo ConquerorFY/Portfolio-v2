@@ -11,10 +11,12 @@ const SkillCard = ({ skillTitle, skillList }) => {
   const [isCollapse, setIsCollapse] = useState(false);
 
   useEffect(() => {
-    if (isCollapse)
-      skillRef.current.style.display = 'none';
-    else
-      skillRef.current.style.display = '';
+    if (isMobile && skillRef.current) {
+      if (isCollapse)
+        skillRef.current.style.display = 'none';
+      else
+        skillRef.current.style.display = '';
+    }
   }, [isCollapse]);
 
   if (isMobile) {

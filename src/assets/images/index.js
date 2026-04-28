@@ -13,6 +13,9 @@ import loading from './loading.gif';
 import acodes from './acodes.png';
 import huawei from './huawei.png';
 import unilah from './unilah.png';
+import psa from './psa.png';
+import jtc from './jtc.png';
+import nus from './nus.png';
 
 export {
   hero,
@@ -30,4 +33,7 @@ export {
   acodes,
   huawei,
   unilah,
+  psa,
+  jtc,
+  nus,
 };

@@ -7,8 +7,9 @@ import {
   // consultation,
   // face,
 } from '@/assets/icons';
+import { jtc, nus, psa } from '@/assets/images';
 
-export const projects = [
+export const softwareProjects = [
   {
     iconUrl: socialmedia,
     theme: 'btn-back-red',
@@ -81,18 +82,34 @@ export const projects = [
       'Designed and deployed automated WhatsApp chatbot solutions, leveraging third-party APIs such as Click4Wasap and PlanifyX. Oversaw system maintenance and performance optimization through rigorous bug resolution.',
     link: 'https://admin.mynew.jobs',
   },
-  // {
-  //     iconUrl: consultation,
-  //     theme: 'btn-back-black',
-  //     name: 'HereForYou Consultation',
-  //     description: 'A full-stack university consultation web system that is buit using HTML, CSS, JavaScript and PHP.',
-  //     link: 'https://github.com/ConquerorFY/HereForYou-Consultation',
-  // },
-  // {
-  //     iconUrl: face,
-  //     theme: 'btn-back-yellow',
-  //     name: 'Face Swapper',
-  //     description: 'A web application that harnesses the power of computer vision to detect faces in photos and allows users to swap faces between different images.',
-  //     link: 'https://github.com/ConquerorFY/Face-Swapper',
-  // }
+];
+
+export const networkProjects = [
+  {
+    imgUrl: psa,
+    name: 'The Port of Singapore Authority (PSA) International',
+    link: 'https://www.singaporepsa.com/',
+    description: [
+      'Spearheaded campus network migration initiatives across Distribution and Access layers, transitioning legacy Cisco infrastructure to high-performance Huawei equipment.',
+      'Orchestrated the deployment of Huawei iMaster NCE Campus and Fabric SDN solutions to modernize data center architecture using BGP EVPN.',
+    ],
+  },
+  {
+    imgUrl: nus,
+    name: 'National University of Singapore (NUS)',
+    link: 'https://nus.edu.sg/',
+    description: [
+      'Managed end-to-end WLAN infrastructure projects for student and guest accommodations, delivering high-capacity, low-latency wireless connectivity.',
+      'Leveraged Huawei iMaster NCE Campus SDN for centralized network management and automated provisioning of enterprise-grade hardware.',
+    ],
+  },
+  {
+    imgUrl: jtc,
+    name: 'Jurong Town Corporation (JTC)',
+    link: 'https://www.jtc.gov.sg/',
+    description: [
+      'Led large-scale campus network implementations for a state-of-the-art digital district, ensuring seamless roaming and high-bandwidth coverage.',
+      'Integrated advanced SDN solutions to streamline network operations and service delivery across the campus ecosystem.',
+    ],
+  },
 ];

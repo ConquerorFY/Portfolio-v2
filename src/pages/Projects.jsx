@@ -1,9 +1,9 @@
 import React from 'react';
-import { projects, socialLinks } from '@/constants';
+import { socialLinks, softwareProjects, networkProjects } from '@/constants';
 import { Link } from 'react-router-dom';
 import { CTA } from '@/components';
-import ProjectCard from '@/components/ui/ProjectCard';
 import useDarkMode from '@/hooks/useDarkMode';
+import ProjectContainer from '@/components/ui/ProjectContainer';
 
 const Projects = () => {
   const { isDarkMode } = useDarkMode();
@@ -25,18 +25,7 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className='flex flex-wrap my-20 gap-16'>
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={project.name + Math.random() * index}
-            name={project.name}
-            company={project.company}
-            theme={project.theme}
-            description={project.description}
-            iconUrl={project.iconUrl}
-            link={project.link} />
-        ))}
-      </div>
+      <ProjectContainer softwareProjects={softwareProjects} networkProjects={networkProjects} />
 
       <div className='mb-20 flex flex-col gap-3 text-slate-500 dark:text-slate-200 sm:w-max'>
         <p>... and many more!</p>
