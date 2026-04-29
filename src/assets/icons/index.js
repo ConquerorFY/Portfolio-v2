@@ -1,166 +1,81 @@
-import css from './css.svg';
-import express from './express.svg';
-import git from './git.svg';
-import github from './github.svg';
-import html from './html.svg';
-import javascript from './javascript.svg';
-import mongodb from './mongodb.svg';
-import motion from './motion.svg';
-import mui from './mui.svg';
-import nextjs from './nextjs.svg';
-import nodejs from './nodejs.svg';
-import react from './react.svg';
-import redux from './redux.svg';
-import sass from './sass.svg';
-import tailwindcss from './tailwindcss.svg';
-import typescript from './typescript.svg';
-import linkedin from './linkedin.svg';
-import twitter from './twitter.svg';
-import car from './car.svg';
-import estate from './estate.svg';
-import pricewise from './pricewise.svg';
-import snapgram from './snapgram.svg';
-import summiz from './summiz.svg';
-import threads from './threads.svg';
-import arrow from './arrow.svg';
-import contact from './contact.svg';
-import angular from './angular.svg';
-import vue from './vue.svg';
-import php from './php.svg';
-import python from './python.svg';
-import java from './java.svg';
-import flutter from './flutter.svg';
-import mysql from './mysql.svg';
-import debian from './debian.svg';
-import ubuntu from './ubuntu.svg';
-import kali from './kali.svg';
-import windows from './windows.svg';
-import gitlab from './gitlab.svg';
-import light from './light.svg';
-import dark from './dark.svg';
-import resume from './resume.svg';
-import nestjs from './nestjs.svg';
-import firebase from './firebase.svg';
-import digitalocean from './digital-ocean.svg';
-import vercel from './vercel.svg';
-import expo from './expo.svg';
-import django from './django.svg';
-import flask from './flask.svg';
-import sqlite from './sqlite.svg';
-import fastapi from './fastapi.svg';
-import numpy from './numpy.svg';
-import tensorflow from './tensorflow.svg';
-import opencv from './opencv.svg';
-import bootstrap from './bootstrap.svg';
-import spring from './spring.svg';
-import socialmedia from './socialmedia.svg';
-import game from './game.svg';
-import extension from './extension.svg';
-import player from './player.svg';
-import consultation from './consultation.svg';
-import face from './face.svg';
-import androidstudio from './androidstudio.svg';
-import laravel from './laravel.svg';
-import postgresql from './postgresql.svg';
-import redis from './redis.svg';
-import supabase from './supabase.svg';
-import euleros from './euleros.png';
-import docker from './docker.svg';
-import portainer from './portainer.svg';
-import nginx from './nginx.svg';
-import ansible from './ansible.svg';
-import terraform from './terraform.svg';
-import gemini from './gemini.svg';
-import chatgpt from './chatgpt.svg';
-import copilot from './copilot.svg';
-import ollama from './ollama.svg';
-import hr from './hr.svg';
-
-import play from './play.svg';
-import pause from './pause.svg';
-import arrowUp from './arrow-up.svg';
-import arrowDown from './arrow-down.svg';
-
-export {
-  css,
-  express,
-  git,
-  github,
-  html,
-  javascript,
-  mongodb,
-  motion,
-  mui,
-  nextjs,
-  nodejs,
-  react,
-  redux,
-  sass,
-  tailwindcss,
-  typescript,
-  linkedin,
-  twitter,
-  car,
-  estate,
-  pricewise,
-  snapgram,
-  summiz,
-  threads,
-  arrow,
-  contact,
-  angular,
-  vue,
-  php,
-  python,
-  java,
-  flutter,
-  mysql,
-  debian,
-  ubuntu,
-  kali,
-  windows,
-  gitlab,
-  light,
-  dark,
-  resume,
-  nestjs,
-  firebase,
-  digitalocean,
-  vercel,
-  expo,
-  django,
-  flask,
-  fastapi,
-  sqlite,
-  numpy,
-  tensorflow,
-  opencv,
-  bootstrap,
-  spring,
-  socialmedia,
-  game,
-  extension,
-  player,
-  consultation,
-  face,
-  androidstudio,
-  laravel,
-  postgresql,
-  redis,
-  supabase,
-  euleros,
-  docker,
-  portainer,
-  nginx,
-  ansible,
-  terraform,
-  gemini,
-  chatgpt,
-  copilot,
-  ollama,
-  hr,
-  play,
-  pause,
-  arrowUp,
-  arrowDown,
-};
+export const css = "/assets/icons/css.svg";
+export const express = "/assets/icons/express.svg";
+export const git = "/assets/icons/git.svg";
+export const github = "/assets/icons/github.svg";
+export const html = "/assets/icons/html.svg";
+export const javascript = "/assets/icons/javascript.svg";
+export const mongodb = "/assets/icons/mongodb.svg";
+export const motion = "/assets/icons/motion.svg";
+export const mui = "/assets/icons/mui.svg";
+export const nextjs = "/assets/icons/nextjs.svg";
+export const nodejs = "/assets/icons/nodejs.svg";
+export const react = "/assets/icons/react.svg";
+export const redux = "/assets/icons/redux.svg";
+export const sass = "/assets/icons/sass.svg";
+export const tailwindcss = "/assets/icons/tailwindcss.svg";
+export const typescript = "/assets/icons/typescript.svg";
+export const linkedin = "/assets/icons/linkedin.svg";
+export const twitter = "/assets/icons/twitter.svg";
+export const car = "/assets/icons/car.svg";
+export const estate = "/assets/icons/estate.svg";
+export const pricewise = "/assets/icons/pricewise.svg";
+export const snapgram = "/assets/icons/snapgram.svg";
+export const summiz = "/assets/icons/summiz.svg";
+export const threads = "/assets/icons/threads.svg";
+export const arrow = "/assets/icons/arrow.svg";
+export const contact = "/assets/icons/contact.svg";
+export const angular = "/assets/icons/angular.svg";
+export const vue = "/assets/icons/vue.svg";
+export const php = "/assets/icons/php.svg";
+export const python = "/assets/icons/python.svg";
+export const java = "/assets/icons/java.svg";
+export const flutter = "/assets/icons/flutter.svg";
+export const mysql = "/assets/icons/mysql.svg";
+export const debian = "/assets/icons/debian.svg";
+export const ubuntu = "/assets/icons/ubuntu.svg";
+export const kali = "/assets/icons/kali.svg";
+export const windows = "/assets/icons/windows.svg";
+export const gitlab = "/assets/icons/gitlab.svg";
+export const light = "/assets/icons/light.svg";
+export const dark = "/assets/icons/dark.svg";
+export const resume = "/assets/icons/resume.svg";
+export const nestjs = "/assets/icons/nestjs.svg";
+export const firebase = "/assets/icons/firebase.svg";
+export const digitalocean = "/assets/icons/digital-ocean.svg";
+export const vercel = "/assets/icons/vercel.svg";
+export const expo = "/assets/icons/expo.svg";
+export const django = "/assets/icons/django.svg";
+export const flask = "/assets/icons/flask.svg";
+export const fastapi = "/assets/icons/fastapi.svg";
+export const sqlite = "/assets/icons/sqlite.svg";
+export const numpy = "/assets/icons/numpy.svg";
+export const tensorflow = "/assets/icons/tensorflow.svg";
+export const opencv = "/assets/icons/opencv.svg";
+export const bootstrap = "/assets/icons/bootstrap.svg";
+export const spring = "/assets/icons/spring.svg";
+export const socialmedia = "/assets/icons/socialmedia.svg";
+export const game = "/assets/icons/game.svg";
+export const extension = "/assets/icons/extension.svg";
+export const player = "/assets/icons/player.svg";
+export const consultation = "/assets/icons/consultation.svg";
+export const face = "/assets/icons/face.svg";
+export const androidstudio = "/assets/icons/androidstudio.svg";
+export const laravel = "/assets/icons/laravel.svg";
+export const postgresql = "/assets/icons/postgresql.svg";
+export const redis = "/assets/icons/redis.svg";
+export const supabase = "/assets/icons/supabase.svg";
+export const euleros = "/assets/icons/euleros.png";
+export const docker = "/assets/icons/docker.svg";
+export const portainer = "/assets/icons/portainer.svg";
+export const nginx = "/assets/icons/nginx.svg";
+export const ansible = "/assets/icons/ansible.svg";
+export const terraform = "/assets/icons/terraform.svg";
+export const gemini = "/assets/icons/gemini.svg";
+export const chatgpt = "/assets/icons/chatgpt.svg";
+export const copilot = "/assets/icons/copilot.svg";
+export const ollama = "/assets/icons/ollama.svg";
+export const hr = "/assets/icons/hr.svg";
+export const play = "/assets/icons/play.svg";
+export const pause = "/assets/icons/pause.svg";
+export const arrowUp = "/assets/icons/arrow-up.svg";
+export const arrowDown = "/assets/icons/arrow-down.svg";

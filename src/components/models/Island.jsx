@@ -10,9 +10,8 @@ import React, { useRef, useEffect } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { useFrame, useThree } from '@react-three/fiber';
 import { a } from '@react-spring/three';
-
-import islandScene from '../../assets/3d/island.glb';
 import { getAutoRotateID } from '../../utils/rotation';
+import { islandScene } from '@/assets/models';
 
 const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
   const islandRef = useRef();

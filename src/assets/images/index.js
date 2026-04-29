@@ -1,39 +1,19 @@
-import hero from './hero.jpg';
-import meta from './meta.png';
-import shopify from './shopify.png';
-import starbucks from './starbucks.png';
-import tesla from './tesla.png';
-import sunway from './sunway.png';
-import hilti from './hilti.png';
-import magik from './magik.png';
-import freelance from './freelance.png';
-import blue from './blue.png';
-import logo from './logo.svg';
-import loading from './loading.gif';
-import acodes from './acodes.png';
-import huawei from './huawei.png';
-import unilah from './unilah.png';
-import psa from './psa.png';
-import jtc from './jtc.png';
-import nus from './nus.png';
-
-export {
-  hero,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  sunway,
-  hilti,
-  magik,
-  freelance,
-  blue,
-  logo,
-  loading,
-  acodes,
-  huawei,
-  unilah,
-  psa,
-  jtc,
-  nus,
-};
+export const hero = "/assets/images/hero.jpg";
+export const meta = "/assets/images/meta.png";
+export const shopify = "/assets/images/shopify.png";
+export const starbucks = "/assets/images/starbucks.png";
+export const tesla = "/assets/images/tesla.png";
+export const sunway = "/assets/images/sunway.png";
+export const hilti = "/assets/images/hilti.png";
+export const magik = "/assets/images/magik.png";
+export const freelance = "/assets/images/freelance.png";
+export const blue = "/assets/images/blue.png";
+export const logo = "/assets/images/logo.svg";
+export const loading = "/assets/images/loading.gif";
+export const acodes = "/assets/images/acodes.png";
+export const huawei = "/assets/images/huawei.png";
+export const unilah = "/assets/images/unilah.png";
+export const psa = "/assets/images/psa.png";
+export const jtc = "/assets/images/jtc.png";
+export const nus = "/assets/images/nus.png";
+export const sakura = "/assets/sakura.mp3";

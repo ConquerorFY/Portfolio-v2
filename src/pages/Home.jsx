@@ -9,8 +9,7 @@ import {
   HomeInfo,
   NightSky,
 } from '../components';
-
-import sakura from '../assets/sakura.mp3';
+import { sakura } from '@/assets/images';
 import { play, pause } from '../assets/icons';
 import useDarkMode from '../hooks/useDarkMode';
 import { getAutoRotateID, setAutoRotateID } from '../utils/rotation';
