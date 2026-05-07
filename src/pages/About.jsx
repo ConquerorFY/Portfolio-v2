@@ -78,7 +78,7 @@ const About = () => {
           <SkillCard skillTitle='Automation' skillList={showcaseSkills.Automation} />
           <SkillCard skillTitle='AI Tools' skillList={showcaseSkills.AI} />
           <SkillCard skillTitle='Operating Systems' skillList={showcaseSkills.OS} />
-          <SkillCard skillTitle='Datacommunications' skillList={showcaseSkills.Network} />
+          <SkillCard skillTitle='Data-Communications (Datacom)' skillList={showcaseSkills.Network} />
         </SkillContainer>
       </div>
 
