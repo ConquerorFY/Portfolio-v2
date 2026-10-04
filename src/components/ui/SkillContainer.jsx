@@ -9,7 +9,7 @@ const SkillContainer = ({ children }) => {
       {children}
     </div>
   }
-  return <div className='md:h-[330px] h-[600px] mt-12'>
+  return <div className='h-[540px] md:h-[430px] lg:h-[400px] mt-12'>
     <Carousel theme={{
       indicators: {
         active: {

@@ -2,5 +2,13 @@ import { skills } from './skills';
 import { experiences } from './experiences';
 import { socialLinks } from './socialLinks';
 import { softwareProjects, networkProjects } from './projects';
+import { certifications } from './certifications';
 
-export { skills, experiences, socialLinks, softwareProjects, networkProjects };
+export {
+  skills,
+  experiences,
+  socialLinks,
+  softwareProjects,
+  networkProjects,
+  certifications,
+};

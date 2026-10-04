@@ -19,9 +19,10 @@ const Projects = () => {
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500 dark:text-slate-200'>
         <p>
-          Throughout the years, I have participated in various projects within
-          both software and network engineering fields which I have learnt a lot
-          from. Here are some of my projects:
+          Throughout my career, my primary focus has centered on architecting, provisioning,
+          and migrating enterprise network infrastructure, campus and data center SDN solutions,
+          and cloud architectures, complemented by full-stack software development. Here are key projects
+          I have delivered:
         </p>
       </div>
 

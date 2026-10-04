@@ -4,12 +4,70 @@ import {
   extension,
   player,
   hr,
-  // consultation,
-  // face,
 } from '@/assets/icons';
 import { jtc, nus, psa } from '@/assets/images';
 
+export const networkProjects = [
+  {
+    imgUrl: psa,
+    name: 'The Port of Singapore Authority (PSA) International',
+    link: 'https://www.singaporepsa.com/',
+    role: 'Enterprise Network & SDN Engineer',
+    description: [
+      'Delivered campus network migration projects across Distribution and Access layers by transitioning legacy Cisco infrastructure to modern Huawei enterprise equipment.',
+      'Implemented Huawei iMaster NCE Campus SDN solution for centralized automated provisioning and policy management.',
+      'Delivered data center network migration from traditional three-tier architecture to high-capacity BGP-EVPN VXLAN Fabric orchestrated via Huawei iMaster NCE Fabric SDN solution.',
+    ],
+  },
+  {
+    imgUrl: nus,
+    name: 'National University of Singapore (NUS)',
+    link: 'https://nus.edu.sg/',
+    role: 'Enterprise WLAN & Campus Infrastructure',
+    description: [
+      'Delivered WLAN network new-build projects for student hostels and guest hotels, provisioning resilient network infrastructure for university services.',
+      'Delivered high-speed, high-bandwidth WiFi connectivity with low latency and comprehensive physical coverage.',
+      'Implemented Huawei iMaster NCE Campus SDN solution to configure, monitor, and provision all campus enterprise hardware.',
+    ],
+  },
+  {
+    imgUrl: jtc,
+    name: 'Jurong Town Corporation (JTC)',
+    link: 'https://www.jtc.gov.sg/',
+    role: 'Digital District Campus Network',
+    description: [
+      'Delivered large-scale campus network new-build project for the client’s state-of-the-art newly developed digital district site.',
+      'Provisioned new enterprise network infrastructure designed to support diverse mission-critical digital services.',
+      'Delivered high-speed WiFi network with extensive coverage, high bandwidth, and seamless roaming, powered by Huawei iMaster NCE Campus SDN management.',
+    ],
+  },
+];
+
 export const softwareProjects = [
+  {
+    iconUrl: player,
+    theme: 'btn-back-pink',
+    name: 'ConX Agency Management System',
+    company: {
+      name: 'ConX Agency',
+      link: 'https://conx-group.webflow.io/',
+    },
+    description:
+      'Architected and delivered full-stack internal admin management system utilizing Next.js, NestJS, and PostgreSQL. Provisioned cloud infrastructure (Supabase DB, Railway host) and automated CI/CD deployment pipelines.',
+    link: 'https://conx-group.webflow.io/',
+  },
+  {
+    iconUrl: game,
+    theme: 'btn-back-green',
+    name: 'Unilah Overseas Campus (UOC) Platform',
+    company: {
+      name: 'UniLah Sdn Bhd',
+      link: 'https://myunilah.com/',
+    },
+    description:
+      'Engineered core user interfaces utilizing React, TypeScript, and Tailwind CSS. Facilitated seamless client-server communication via comprehensive REST API integration with a NestJS and PostgreSQL backend.',
+    link: 'https://uoc.myunilah.com/',
+  },
   {
     iconUrl: socialmedia,
     theme: 'btn-back-red',
@@ -19,20 +77,8 @@ export const softwareProjects = [
     },
     name: 'Moosan Durian Club',
     description:
-      'Developed high-performance frontend interfaces using Next.js, HTML, and CSS. Orchestrated efficient backend data synchronization through robust API integration with React Query.',
+      'Developed high-performance frontend interfaces using Next.js and Tailwind CSS. Orchestrated efficient backend data synchronization through robust API integration with React Query and Redux.',
     link: 'https://moosan.club/',
-  },
-  {
-    iconUrl: game,
-    theme: 'btn-back-green',
-    name: 'Unilah Overseas Campus (UOC)',
-    company: {
-      name: 'UniLah Sdn Bhd',
-      link: 'https://myunilah.com/',
-    },
-    description:
-      'Engineered intuitive user interfaces utilizing React, HTML, and CSS. Facilitated seamless client-server communication via comprehensive API integration with a NestJS backend.',
-    link: 'https://uoc.myunilah.com/',
   },
   {
     iconUrl: extension,
@@ -43,20 +89,8 @@ export const softwareProjects = [
       link: 'https://linepilates.asia/',
     },
     description:
-      'Enhanced platform user experience by implementing sophisticated frontend features and maintaining UI integrity. Optimized data visualization for information retrieved from a .NET backend.',
+      'Enhanced platform user experience by implementing frontend features and maintaining UI integrity. Optimized data visualization for information retrieved from a .NET backend.',
     link: 'https://on-lineacademy.com/main/index.asp',
-  },
-  {
-    iconUrl: player,
-    theme: 'btn-back-pink',
-    name: 'ConX Agency Management System',
-    company: {
-      name: 'ConX Agency',
-      link: 'https://conx-group.webflow.io/',
-    },
-    description:
-      'Served as Technical Lead, architecting and managing a scalable backend infrastructure using NestJS and Supabase. Spearheaded end-to-end integration of complex API endpoints with the frontend application.',
-    link: 'https://conx-group.webflow.io/',
   },
   {
     iconUrl: socialmedia,
@@ -79,37 +113,7 @@ export const softwareProjects = [
       link: 'https://www.asiapactalents.com/',
     },
     description:
-      'Designed and deployed automated WhatsApp chatbot solutions, leveraging third-party APIs such as Click4Wasap and PlanifyX. Oversaw system maintenance and performance optimization through rigorous bug resolution.',
+      'Designed and deployed automated WhatsApp chatbot solutions, leveraging third-party APIs such as Click4Wasap and PlanifyX. Oversaw system maintenance and performance optimization.',
     link: 'https://admin.mynew.jobs',
-  },
-];
-
-export const networkProjects = [
-  {
-    imgUrl: psa,
-    name: 'The Port of Singapore Authority (PSA) International',
-    link: 'https://www.singaporepsa.com/',
-    description: [
-      'Spearheaded campus network migration initiatives across Distribution and Access layers, transitioning legacy Cisco infrastructure to high-performance Huawei equipment.',
-      'Orchestrated the deployment of Huawei iMaster NCE Campus and Fabric SDN solutions to modernize data center architecture using BGP EVPN.',
-    ],
-  },
-  {
-    imgUrl: nus,
-    name: 'National University of Singapore (NUS)',
-    link: 'https://nus.edu.sg/',
-    description: [
-      'Managed end-to-end WLAN infrastructure projects for student and guest accommodations, delivering high-capacity, low-latency wireless connectivity.',
-      'Leveraged Huawei iMaster NCE Campus SDN for centralized network management and automated provisioning of enterprise-grade hardware.',
-    ],
-  },
-  {
-    imgUrl: jtc,
-    name: 'Jurong Town Corporation (JTC)',
-    link: 'https://www.jtc.gov.sg/',
-    description: [
-      'Led large-scale campus network implementations for a state-of-the-art digital district, ensuring seamless roaming and high-bandwidth coverage.',
-      'Integrated advanced SDN solutions to streamline network operations and service delivery across the campus ecosystem.',
-    ],
   },
 ];

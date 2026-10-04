@@ -46,18 +46,170 @@ import {
   nginx,
   ansible,
   terraform,
+  aws,
+  kubernetes,
+  wireshark,
+  tcpdump,
+  bash,
+  argocd,
 } from '../assets/icons';
 import { huawei } from '../assets/images';
 
 export const skills = [
-  // --- Networking ---
+  // ==========================================
+  // --- Enterprise & DC Networking ---
+  // ==========================================
   {
     imageUrl: huawei,
-    name: 'Switches (S & CE Series), AP, AC',
+    name: 'Huawei S-Series & CE-Series Switches',
+    type: 'Network',
+  },
+  {
+    imageUrl: huawei,
+    name: 'Huawei AirEngine AP & AC',
+    type: 'Network',
+  },
+  {
+    imageUrl: huawei,
+    name: 'iMaster NCE',
+    type: 'Network',
+  },
+  {
+    imageUrl: wireshark,
+    name: 'Wireshark',
+    type: 'Network',
+  },
+  {
+    imageUrl: tcpdump,
+    name: 'tcpdump',
     type: 'Network',
   },
 
-  // --- Frontend ---
+  // ==========================================
+  // --- Cloud, DevOps & Platform ---
+  // ==========================================
+  {
+    imageUrl: aws,
+    name: 'AWS',
+    type: 'Cloud, DevOps & Platform',
+  },
+  {
+    imageUrl: terraform,
+    name: 'Terraform',
+    type: ['Cloud, DevOps & Platform', 'Automation'],
+  },
+  {
+    imageUrl: docker,
+    name: 'Docker',
+    type: 'Cloud, DevOps & Platform',
+  },
+  {
+    imageUrl: docker,
+    name: 'Docker Hub',
+    type: 'Cloud, DevOps & Platform',
+  },
+  {
+    imageUrl: kubernetes,
+    name: 'Kubernetes',
+    type: 'Cloud, DevOps & Platform',
+  },
+  {
+    imageUrl: argocd,
+    name: 'ArgoCD',
+    type: 'Cloud, DevOps & Platform',
+  },
+  {
+    imageUrl: nginx,
+    name: 'Nginx',
+    type: 'Cloud, DevOps & Platform',
+  },
+  {
+    imageUrl: portainer,
+    name: 'Portainer',
+    type: 'Cloud, DevOps & Platform',
+  },
+  {
+    imageUrl: vercel,
+    name: 'Vercel',
+    type: 'Cloud, DevOps & Platform',
+  },
+  {
+    imageUrl: digitalocean,
+    name: 'Digital Ocean',
+    type: 'Cloud, DevOps & Platform',
+  },
+  {
+    imageUrl: supabase,
+    name: 'Supabase',
+    type: 'Cloud, DevOps & Platform',
+  },
+  {
+    imageUrl: firebase,
+    name: 'Firebase',
+    type: 'Cloud, DevOps & Platform',
+  },
+  {
+    imageUrl: github,
+    name: 'GitHub',
+    type: 'Cloud, DevOps & Platform',
+  },
+  {
+    imageUrl: gitlab,
+    name: 'GitLab',
+    type: 'Cloud, DevOps & Platform',
+  },
+
+  // ==========================================
+  // --- Automation ---
+  // ==========================================
+  {
+    imageUrl: ansible,
+    name: 'Ansible',
+    type: 'Automation',
+  },
+  {
+    imageUrl: bash,
+    name: 'Bash',
+    type: 'Automation',
+  },
+  {
+    imageUrl: python,
+    name: 'Python',
+    type: ['Automation', 'Backend'],
+  },
+
+  // ==========================================
+  // --- Operating Systems ---
+  // ==========================================
+  {
+    imageUrl: ubuntu,
+    name: 'Ubuntu Linux',
+    type: 'OS',
+  },
+  {
+    imageUrl: debian,
+    name: 'Debian Linux',
+    type: 'OS',
+  },
+  {
+    imageUrl: kali,
+    name: 'Kali Linux',
+    type: 'OS',
+  },
+  {
+    imageUrl: euleros,
+    name: 'Euler OS',
+    type: 'OS',
+  },
+  {
+    imageUrl: windows,
+    name: 'Microsoft Windows',
+    type: 'OS',
+  },
+
+  // ==========================================
+  // --- Frontend (Original Content Kept) ---
+  // ==========================================
   {
     imageUrl: react,
     name: 'React',
@@ -114,7 +266,9 @@ export const skills = [
     type: 'Frontend',
   },
 
-  // --- Backend ---
+  // ==========================================
+  // --- Backend (Original Content Kept) ---
+  // ==========================================
   {
     imageUrl: nodejs,
     name: 'Node.js',
@@ -124,11 +278,6 @@ export const skills = [
     imageUrl: nestjs,
     name: 'Nest.js',
     type: 'Backend',
-  },
-  {
-    imageUrl: python,
-    name: 'Python',
-    type: ['Backend', 'Automation'],
   },
   {
     imageUrl: express,
@@ -146,7 +295,9 @@ export const skills = [
     type: 'Backend',
   },
 
-  // --- Database ---
+  // ==========================================
+  // --- Database (Original Content Kept) ---
+  // ==========================================
   {
     imageUrl: postgresql,
     name: 'PostgreSQL',
@@ -173,73 +324,18 @@ export const skills = [
     type: 'Database',
   },
 
-  // --- Platforms & Services ---
+  // ==========================================
+  // --- Version Control (Original Content Kept) ---
+  // ==========================================
   {
-    imageUrl: vercel,
-    name: 'Vercel',
-    type: 'Platform',
-  },
-  {
-    imageUrl: digitalocean,
-    name: 'Digital Ocean',
-    type: 'Platform',
-  },
-  {
-    imageUrl: supabase,
-    name: 'Supabase',
-    type: 'Platform',
-  },
-  {
-    imageUrl: firebase,
-    name: 'Firebase',
-    type: 'Platform',
-  },
-  {
-    imageUrl: github,
-    name: 'GitHub',
-    type: 'Platform',
-  },
-  {
-    imageUrl: gitlab,
-    name: 'GitLab',
-    type: 'Platform',
-  },
-  {
-    imageUrl: docker,
-    name: 'Docker Hub',
-    type: 'Platform',
+    imageUrl: git,
+    name: 'Git',
+    type: 'Version Control',
   },
 
-  // --- Infrastructure ---
-  {
-    imageUrl: docker,
-    name: 'Docker',
-    type: 'Infrastructure',
-  },
-  {
-    imageUrl: nginx,
-    name: 'Nginx',
-    type: 'Infrastructure',
-  },
-  {
-    imageUrl: portainer,
-    name: 'Portainer',
-    type: 'Infrastructure',
-  },
-
-  // --- Automation ---
-  {
-    imageUrl: ansible,
-    name: 'Ansible',
-    type: 'Automation',
-  },
-  {
-    imageUrl: terraform,
-    name: 'Terraform',
-    type: 'Automation',
-  },
-
-  // --- Artificial Intelligence ---
+  // ==========================================
+  // --- Artificial Intelligence (Original Content Kept) ---
+  // ==========================================
   {
     imageUrl: gemini,
     name: 'Gemini',
@@ -261,7 +357,9 @@ export const skills = [
     type: 'AI',
   },
 
-  // --- Application Development ---
+  // ==========================================
+  // --- Application Development (Original Content Kept) ---
+  // ==========================================
   {
     imageUrl: react,
     name: 'React Native',
@@ -286,39 +384,5 @@ export const skills = [
     imageUrl: java,
     name: 'Java',
     type: 'Application',
-  },
-
-  // --- OS ---
-  {
-    imageUrl: ubuntu,
-    name: 'Ubuntu Linux',
-    type: 'OS',
-  },
-  {
-    imageUrl: debian,
-    name: 'Debian Linux',
-    type: 'OS',
-  },
-  {
-    imageUrl: kali,
-    name: 'Kali Linux',
-    type: 'OS',
-  },
-  {
-    imageUrl: euleros,
-    name: 'Euler OS',
-    type: 'OS',
-  },
-  {
-    imageUrl: windows,
-    name: 'Microsoft Windows',
-    type: 'OS',
-  },
-
-  // --- Version Control ---
-  {
-    imageUrl: git,
-    name: 'Git',
-    type: 'Version Control',
   },
 ];

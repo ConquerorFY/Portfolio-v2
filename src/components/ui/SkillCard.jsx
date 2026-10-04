@@ -48,11 +48,11 @@ const SkillCard = ({ skillTitle, skillList }) => {
       </div>
     </div>
   }
-  return <div className='flex flex-col h-full items-start justify-start px-5'>
+  return <div className='flex flex-col h-full items-start justify-start px-6 sm:px-12 pb-10'>
     <h3 className='sub-subhead-text dark:text-white'>
       {skillTitle}
     </h3>
-    <div className='mt-8 flex flex-wrap gap-12'>
+    <div className='mt-6 flex flex-wrap gap-8 sm:gap-10'>
       {skillList.map((skill, index) => (
         <Tooltip content={skill.name} key={index}>
           <div className='block-container w-20 h-20'>

@@ -17,3 +17,4 @@ export const psa = "/assets/images/psa.png";
 export const jtc = "/assets/images/jtc.png";
 export const nus = "/assets/images/nus.png";
 export const sakura = "/assets/sakura.mp3";
+export const hciaDatacom = "/assets/images/hcia-datacom.jpg";
