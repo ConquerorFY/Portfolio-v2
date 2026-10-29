@@ -50,11 +50,11 @@ export const softwareProjects = [
     name: 'ConX Agency Management System',
     company: {
       name: 'ConX Agency',
-      link: 'https://conx-group.webflow.io/',
+      link: 'https://conxagency.com.au',
     },
     description:
       'Architected and delivered full-stack internal admin management system utilizing Next.js, NestJS, and PostgreSQL. Provisioned cloud infrastructure (Supabase DB, Railway host) and automated CI/CD deployment pipelines.',
-    link: 'https://conx-group.webflow.io/',
+    link: 'https://admin.conxagency.com.au',
   },
   {
     iconUrl: game,
